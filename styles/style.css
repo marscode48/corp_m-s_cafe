@@ -311,52 +311,52 @@ Mainvisual
 }
 
 /*-------------------------------------------
-Information
+News
 -------------------------------------------*/
-.information {
+.news {
   margin-bottom: 140px;
 }
 
-.information__date-en {
+.news__date-en {
   display: block;
   font-size: 1.5rem;
 }
 
-.information__time-en {
+.news__time-en {
   display: block;
   font-size: 1.125rem;
 }
 
-.information__place {
+.news__place {
   font-size: 2.5rem;
   font-weight: 400;
   margin: 20px 0;
 }
 
-.information__date-ja {
+.news__date-ja {
   font-size: 1.125rem;
 }
 
 /*-------------------------------------------
-Gallery
+Menu
 -------------------------------------------*/
-.gallery {
+.menu {
   margin-bottom: 480px;
 }
 
-.gallery__list li {
+.menu__list li {
   margin-bottom: 60px;
 }
 
-.gallery__list li img {
+.menu__list li img {
   width: 48%;
 }
 
-.gallery__list li:nth-child(odd) {
+.menu__list li:nth-child(odd) {
   text-align: left;
 }
 
-.gallery__list li:nth-child(even) {
+.menu__list li:nth-child(even) {
   text-align: right;
 }
 
