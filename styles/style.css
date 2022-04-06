@@ -132,9 +132,8 @@ li {
 ヘッダー
 -------------------------------------------*/
 .header__logo {
-  line-height: 1px;
   position: fixed;
-  top: 35px;
+  top: 30px;
   left: 30px;
   z-index: 40;
   visibility: hidden;
@@ -145,6 +144,16 @@ li {
 
 .header__logo a {
   display: block;
+  height: 30px;
+}
+
+.header__logo a img {
+  width: 30px;
+}
+
+.header__logo a span {
+  font-size: 1.25rem;
+  line-height: 30px;
 }
 
 .header__logo.inview, .header__hamburger.inview {
