@@ -34,6 +34,17 @@ li {
   font-weight: 300;
   letter-spacing: 0.03em;
   margin: 100px 0;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.site-title.inview {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .section-title {
