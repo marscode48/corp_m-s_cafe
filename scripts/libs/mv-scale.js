@@ -1,7 +1,7 @@
 class MvScaleChange {
   constructor() {
     this.DOM = {};
-    this.DOM.elems = document.querySelectorAll('.main__img')
+    this.DOM.elems = document.querySelectorAll('.mainvisual__img')
     this._mvScale();
   }
 

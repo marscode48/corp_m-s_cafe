@@ -265,13 +265,57 @@ Mainvisual
   justify-content: center;
   // スクロールで画像を拡大させた際に、横スクロールが出ないよう設定
   overflow-x: hidden;
+  position: relative;
 
-  & img {
+  .mainvisual__img {
     width: calc(100% / 3);
     height: 100vh;
     // スクロールで画像を拡大させた際に、画像が縮まないように設定
     flex-shrink: 0;
     object-fit: cover;
+  }
+
+  &__footer {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 2;
+    height: 150px;
+    width: 40px;
+    overflow: hidden;
+  }
+
+  &__downarrow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 15px;
+    @include animation(
+      $name: kf-arrow-anime,
+      $iteration-count: infinite,
+      $duration: 2s,
+      $timing-function: linear
+    );
+  }
+
+  &__scrolltext {
+    position: absolute;
+    transform: rotate(90deg);
+    left: -8px;
+    top: 15px;
+    font-size: 1.75rem;
+  }
+}
+
+@keyframes kf-arrow-anime {
+  0%,
+  50%,
+  100% {
+    transform: translateY(-10%);
+  }
+  30% {
+    transform: none;
   }
 }
 
