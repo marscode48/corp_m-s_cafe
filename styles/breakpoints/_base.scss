@@ -261,13 +261,24 @@ li {
 Mainvisual
 -------------------------------------------*/
 .mainvisual {
-  display: flex;
-  justify-content: center;
-  // スクロールで画像を拡大させた際に、横スクロールが出ないよう設定
-  overflow-x: hidden;
   position: relative;
 
-  .mainvisual__img {
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 100px black;
+    z-index: 2;
+  }
+  
+  &__inner {
+    display: flex;
+    justify-content: center;
+    // スクロールで画像を拡大させた際に、横スクロールが出ないよう設定
+    overflow-x: hidden;
+  }
+
+  &__img {
     width: calc(100% / 3);
     height: 100vh;
     // スクロールで画像を拡大させた際に、画像が縮まないように設定
@@ -280,7 +291,7 @@ Mainvisual
     left: 50%;
     bottom: 20px;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 1;
     height: 150px;
     width: 40px;
     overflow: hidden;
@@ -305,6 +316,7 @@ Mainvisual
     left: -8px;
     top: 15px;
     font-size: 1.75rem;
+    opacity: 0.7;
   }
 }
 
