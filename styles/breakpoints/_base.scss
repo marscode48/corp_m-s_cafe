@@ -32,12 +32,12 @@ li {
   letter-spacing: 0.03em;
   margin: 100px 0;
   opacity: 0;
-  transform: translateY(100px);
-  transition: all 1s ease;
+  transform: translateY(50%);
+  transition: 1s;
 
   &.inview {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0%);
   }
 
 }
@@ -118,18 +118,6 @@ li {
     opacity: 1;
     visibility: visible;
   }
-}
-
-
-/* フェード表示 */
-.fadein {
-  opacity: 0;
-  transform: translate(0, 50%);
-  transition: 2s;
-}
-.fadein.show {
-  transform: translate(0 ,0);
-  opacity: 1;
 }
 
 
@@ -374,22 +362,28 @@ Menu
 -------------------------------------------*/
 .menu {
   margin-bottom: 480px;
+  
+  &__item {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translate(0, 50%);
+    transition: 2s;
+    
+    &:nth-child(odd) {
+      text-align: left;
+    }
+    
+    &:nth-child(even) {
+      text-align: right;
+    }
 
-  &__list {
-    & li {
-      margin-bottom: 60px;
+    &.inview {
+      transform: translate(0 ,0);
+      opacity: 1;
+    }
 
-      & img {
-        width: 48%;
-      }
-
-      &:nth-child(odd) {
-        text-align: left;
-      }
-
-      &:nth-child(even) {
-        text-align: right;
-      }
+    & > img {
+      width: 48%;
     }
   }
 }

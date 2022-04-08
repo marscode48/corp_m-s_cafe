@@ -17,17 +17,9 @@ class Main {
     new SmoothScroll(0);
   }
 
-  _galleryAnimation(el, inview) {
-    if(inview) {
-      el.classList.add('show');
-      console.log(el)
-    }
-  }
-
   _inviewAnimation(el, inview) {
     if(inview) {
       el.classList.add('inview');
-      console.log(el)
     }
   }
 
@@ -48,7 +40,7 @@ class Main {
   }
 
   _scrollInit() {
-    new ScrollObserver('.inview', this._galleryAnimation);
+    new ScrollObserver('.menu__item', this._inviewAnimation);
     new ScrollObserver('.site-title', this._inviewAnimation);
     new ScrollObserver('#menu', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px 0px 0px"});
     new ScrollObserver('#location', this._fadeInAnimation.bind(this), {once: false, rootMargin: "-300px 0px 0px 0px"});

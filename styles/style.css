@@ -35,16 +35,16 @@ li {
   letter-spacing: 0.03em;
   margin: 100px 0;
   opacity: 0;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .site-title.inview {
   opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .section-title {
@@ -122,21 +122,6 @@ li {
 .bg.inview {
   opacity: 1;
   visibility: visible;
-}
-
-/* フェード表示 */
-.fadein {
-  opacity: 0;
-  -webkit-transform: translate(0, 50%);
-          transform: translate(0, 50%);
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-.fadein.show {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
 }
 
 /*-------------------------------------------
@@ -446,20 +431,31 @@ Menu
   margin-bottom: 480px;
 }
 
-.menu__list li {
+.menu__item {
   margin-bottom: 60px;
+  opacity: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
-.menu__list li img {
-  width: 48%;
-}
-
-.menu__list li:nth-child(odd) {
+.menu__item:nth-child(odd) {
   text-align: left;
 }
 
-.menu__list li:nth-child(even) {
+.menu__item:nth-child(even) {
   text-align: right;
+}
+
+.menu__item.inview {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.menu__item > img {
+  width: 48%;
 }
 
 /*-------------------------------------------
