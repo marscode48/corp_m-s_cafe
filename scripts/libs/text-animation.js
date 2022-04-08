@@ -13,7 +13,25 @@ class TextAnimation {
   }
 
   animate() {
-    console.log(this.DOM.el.innerHTML)
     this.DOM.el.classList.toggle('inview');
+  }
+}
+class TweenTextAnimation extends TextAnimation {
+  constructor(el) {
+    super(el);
+    this.DOM.chars = this.DOM.el.querySelectorAll('.char');
+  }
+
+  animate() {
+    this.DOM.el.classList.add('inview');
+    this.DOM.chars.forEach((c, i) => {
+      gsap.to(c, .6, {
+        ease: Back.easeOut,
+        delay: i * .1,
+        startAt: { y: '-50%', opacity: 0},
+        y: '0%',
+        opacity: 1
+      });
+    });
   }
 }

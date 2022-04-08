@@ -16,7 +16,7 @@
 }
 
 
-.tween-animate-title.inview .char {
+.animate-title.inview .char {
   @include animation(
     $name: kf-animate-chars,
     $duration: 0.8s,
