@@ -334,25 +334,25 @@ News
 -------------------------------------------*/
 .news {
   margin-bottom: 140px;
-  
-  &__date-en {
-    display: block;
-    font-size: 1.5rem;
-  }
-  
-  &__time-en {
-    display: block;
-    font-size: 1.125rem;
+  font-size: 0.8rem;
+
+  &__list {
+    border-top: 1px solid #C8C8C8;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  &__place {
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin: 20px 0;
+  &__date {
+    width: 20%;
+    padding: 15px;
+    border-bottom: 1px solid #C8C8C8;
   }
 
-  &__date-ja {
-    font-size: 1.125rem;
+  &__title {
+    border-bottom: 1px solid #C8C8C8;
+    width: 80%;
+    padding: 15px;
   }
 }
 

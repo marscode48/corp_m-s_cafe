@@ -697,26 +697,29 @@ News
 -------------------------------------------*/
 .news {
   margin-bottom: 140px;
+  font-size: 0.8rem;
 }
 
-.news__date-en {
-  display: block;
-  font-size: 1.5rem;
+.news__list {
+  border-top: 1px solid #C8C8C8;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.news__time-en {
-  display: block;
-  font-size: 1.125rem;
+.news__date {
+  width: 20%;
+  padding: 15px;
+  border-bottom: 1px solid #C8C8C8;
 }
 
-.news__place {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin: 20px 0;
-}
-
-.news__date-ja {
-  font-size: 1.125rem;
+.news__title {
+  border-bottom: 1px solid #C8C8C8;
+  width: 80%;
+  padding: 15px;
 }
 
 /*-------------------------------------------
@@ -912,11 +915,20 @@ Footer
   .news {
     margin-bottom: 80px;
   }
-  .news__date-en, .news__time-en, .news__date-ja {
-    font-size: 1rem;
+  .news__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .news__place {
-    font-size: 2rem;
+  .news__date {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .news__title {
+    width: 100%;
+    padding-top: 0;
   }
   /*-------------------------------------------
   Menu
