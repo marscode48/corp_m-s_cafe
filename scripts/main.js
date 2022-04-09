@@ -49,6 +49,7 @@ class Main {
   _scrollInit() {
     new ScrollObserver('.menu__item', this._inviewAnimation);
     new ScrollObserver('.site-title', this._inviewAnimation);
+    new ScrollObserver('.cover-slide', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
     new ScrollObserver('.tween-animate-title', this._textAnimation, {rootMargin: "-100px 0px"});
     new ScrollObserver('#menu', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px 0px 0px"});
