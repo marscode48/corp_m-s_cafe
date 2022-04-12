@@ -362,28 +362,95 @@ Menu
 -------------------------------------------*/
 .menu {
   margin-bottom: 480px;
+
+  &__inner {
+    background-color: $cBgGray;
+    padding: 50px 100px;
+
+  }
   
-  &__item {
-    margin-bottom: 60px;
-    opacity: 0;
-    transform: translate(0, 50%);
-    transition: 2s;
-    
-    &:nth-child(odd) {
-      text-align: left;
-    }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 0;
     
     &:nth-child(even) {
-      text-align: right;
+      flex-direction: row-reverse;
+
+      & .menu__title::before {
+        left: 200px;
+        transform-origin: left;
+      }
+
+      & .menu__texts-inner {
+        text-align: right;
+      }
+    }
+  }
+
+  &__img {
+    flex-basis: 50%;
+    height: 400px;
+    transition: box-shadow 1ms linear 0.8s;
+
+    & > img {
+      position: relative;
+      z-index: -1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
 
     &.inview {
-      transform: translate(0 ,0);
-      opacity: 1;
+      box-shadow: inset 0 0 30px $cBlack;
+    }
+  }
+
+  &__texts {
+    flex-basis: 35%;
+    display: flex;
+    align-items: flex-end;
+
+    &.inview {
+      & .menu__title::before {
+        transform: translateY(-50%);
+      }
     }
 
-    & > img {
-      width: 48%;
+    &-inner {
+      padding-bottom: 43px;
+      text-align: left;
+    }
+  }
+
+
+  &__title {
+    position: relative;
+    margin-bottom: 10px;
+    
+    @include p-base(
+      $display: block,
+      $width: 85px,
+      $height: 1px,
+      $top: 50%,
+      $left: -95px
+    ) {
+      background-color: $cWhite;
+      transform: translateY(-50%) scaleX(0);
+      transition: transform 0.3s ease 1.6s;
+      transform-origin: right;
+    }
+  }
+
+  &__price {
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    a {
+      display: block;
     }
   }
 }

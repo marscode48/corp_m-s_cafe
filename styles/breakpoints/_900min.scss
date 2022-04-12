@@ -45,14 +45,32 @@
   -------------------------------------------*/
   .menu {
     margin-bottom: 280px;
+    
+    &__inner {
+      padding: 15px;
+    }
 
-    &__list {
-      & li {
-        margin-bottom: 30px;
+    &__flex {
+      flex-direction: column;
 
-        & img {
-          width: 100%;
+      &:nth-child(even) {
+        flex-direction: column;
+
+        & .menu__texts-inner {
+          text-align: center;
         }
+      }
+    }
+
+    &__texts-inner {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &__title {
+      &::before {
+        display: none;
       }
     }
   }
