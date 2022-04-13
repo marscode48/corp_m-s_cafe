@@ -1200,31 +1200,29 @@ Location
   z-index: 20;
 }
 
-.location__place {
-  font-size: 1.75rem;
+.location__name {
+  font-size: 2rem;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
-.location__address {
+.location__address, .location__open, .location__contact {
   margin-bottom: 20px;
 }
 
-.location__contact {
-  margin-bottom: 30px;
-}
-
-.location__btn {
-  border: solid 1px #fff;
+.location .btn {
   color: #fff;
-  display: inline-block;
-  padding: 15px 82px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-weight: 300;
 }
 
-.location__btn:hover {
-  background-color: #050507;
+.location .btn.slide-bg::before {
+  background: #fff;
+}
+
+.location .btn.slide-bg:hover {
+  color: #050507;
 }
 
 /*-------------------------------------------

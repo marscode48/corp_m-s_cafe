@@ -464,29 +464,28 @@ Location
   position: relative;
   z-index: 20;
 
-  &__place {
-    font-size: 1.75rem;
+  &__name {
+    font-size: 2rem;
     font-weight: 400;
     margin-bottom: 20px;
   }
 
-  &__address {
+  &__address, &__open, &__contact {
     margin-bottom: 20px;
   }
 
-  &__contact {
-    margin-bottom: 30px;
-  }
+  & .btn {
+    color: $cWhite;
+    background-color: transparent;
+    border: 1px solid $cWhite;
+    font-weight: 300;
 
-  &__btn {
-    border: solid 1px #fff;
-    color: #fff;
-    display: inline-block;
-    padding: 15px 82px;
-    transition: 0.3s;
-    
-    &:hover {
-      background-color: $cBlack;
+    &.slide-bg::before {
+      background: $cWhite;
+    }
+
+    &.slide-bg:hover {
+      color: $cBlack;
     }
   }
 }
