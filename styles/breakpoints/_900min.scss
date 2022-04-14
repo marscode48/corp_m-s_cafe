@@ -85,15 +85,26 @@
 
 
   /*-------------------------------------------
-  About
+  Feature
   -------------------------------------------*/
-  .about {
-    &__btn {
-      width: 100%;
+  .feature {
 
-      &::before, &::after {
-        display: none;
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 100%;
+      margin-bottom: 30px;
+
+      & img {
+        height: 300px;
       }
+    }
+
+    &__text {
+      width: 100%;
+      padding: 0 3%;
     }
   }
 
