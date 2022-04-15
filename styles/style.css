@@ -1389,8 +1389,12 @@ Footer
   margin-top: 30px;
 }
 
-.footer__sns li {
-  margin-right: 15px;
+.footer__sns li a {
+  padding: 0 15px;
+}
+
+.footer__sns .icon::before {
+  left: 0;
 }
 
 .footer__copyright {

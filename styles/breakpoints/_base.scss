@@ -608,7 +608,13 @@ Footer
     margin-top: 30px;
 
     & li {
-      margin-right: 15px;
+      & a {
+        padding: 0 15px;
+      }
+    }
+
+    & .icon::before {
+      left: 0;
     }
   }
 
