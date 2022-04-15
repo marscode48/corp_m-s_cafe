@@ -749,8 +749,8 @@ li {
 .side-btn {
   border: solid 1px #fff;
   position: fixed;
-  right: -144px;
-  bottom: 200px;
+  right: -200px;
+  bottom: 250px;
   -webkit-transform: rotate(-90deg) translateY(60px);
           transform: rotate(-90deg) translateY(60px);
   -webkit-transition: 0.6s;
@@ -759,17 +759,19 @@ li {
 }
 
 .side-btn a {
-  width: 165px;
+  width: 140px;
   font-size: 0.875rem;
   display: inline-block;
   letter-spacing: 0.1em;
-  padding: 15px 0;
+  text-align: start;
+  padding: 10px 0 10px 40px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border-left: solid 1px #fff;
 }
 
-.side-btn a:last-of-type {
-  border-left: solid 1px #fff;
+.side-btn a:first-of-type {
+  border-left: none;
 }
 
 .side-btn a:hover {
@@ -779,6 +781,38 @@ li {
 .side-btn.inview {
   -webkit-transform: rotate(-90deg) translateY(0px);
           transform: rotate(-90deg) translateY(0px);
+}
+
+/* アイコン */
+.icon {
+  position: relative;
+}
+
+.icon::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  width: 1em;
+  height: 1em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon.twitter::before {
+  background-image: url(../images/twitter.svg);
+}
+
+.icon.facebook::before {
+  background-image: url(../images/facebook.svg);
+}
+
+.icon.instagram::before {
+  background-image: url(../images/instagram.svg);
 }
 
 /* Locationの背景画像 */

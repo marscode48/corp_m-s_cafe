@@ -66,22 +66,24 @@ li {
 .side-btn {
   border: solid 1px $cWhite;
   position: fixed;
-  right: -144px;
-  bottom: 200px;
+  right: -200px;
+  bottom: 250px;
   transform: rotate(-90deg) translateY(60px);
   transition: 0.6s;
   z-index: 30;
   
   & a {
-    width: 165px;
+    width: 140px;
     font-size: 0.875rem;
     display: inline-block;
     letter-spacing: 0.1em;
-    padding: 15px 0;
+    text-align: start;
+    padding: 10px 0 10px 40px;
     transition: 0.3s;
-
-    &:last-of-type {
-      border-left: solid 1px $cWhite;
+    border-left: solid 1px $cWhite;
+    
+    &:first-of-type {
+      border-left: none;
     }
 
     &:hover {
@@ -92,6 +94,35 @@ li {
   // jquery.js使用時はコメントアウトする
   &.inview {
     transform: rotate(-90deg) translateY(0px);
+  }
+}
+
+
+/* アイコン */
+.icon {
+  position: relative;
+
+  @include p-base($left: 14%, $top: 50%, $width: 1em, $height: 1em) {
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &.twitter {
+    &::before {
+      background-image: url(../images/twitter.svg);
+    }
+  }
+  &.facebook {
+    &::before {
+      background-image: url(../images/facebook.svg);
+    }
+  }
+  &.instagram {
+    &::before {
+      background-image: url(../images/instagram.svg);
+    }
   }
 }
 
