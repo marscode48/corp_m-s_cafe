@@ -14,7 +14,7 @@ class Main {
     new MvScaleChange();
     new MenuOpen();
     new MenuFadeIn(520);
-    new SmoothScroll(0);
+    new SmoothScroll(80);
   }
 
   _inviewAnimation(el, inview) {
