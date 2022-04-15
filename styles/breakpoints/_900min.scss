@@ -62,7 +62,17 @@
       }
     }
 
+    &__img {
+      flex-basis: auto;
+    }
+
+    &__texts {
+      flex-basis: auto;
+    }
+
     &__texts-inner {
+      width: 100%;
+      margin: 0 auto;
       text-align: center;
       padding-top: 30px;
       padding-bottom: 30px;
