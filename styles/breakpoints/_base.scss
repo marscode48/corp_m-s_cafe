@@ -547,6 +547,24 @@ Footer
   padding: 80px 30px;
   text-align: left;
 
+  &__logo {
+    margin-bottom: 15px;
+
+    & a {
+      display: block;
+      height: 30px;
+      
+      & img {
+        width: 30px;
+      }
+
+      & span {
+        font-size: 1.25rem;
+        line-height: 30px;
+      }
+    }
+  }
+
   &__ask {
     & p {
       line-height: 1.6;
@@ -568,7 +586,7 @@ Footer
     align-items: center;
 
     & li:last-child {
-      margin-left: 30px;
+      margin-left: 15px;
     }
   }
 }
