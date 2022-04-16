@@ -44,7 +44,6 @@ li {
 .section-title {
   border-bottom: solid 1px $cWhite;
   display: inline-block;
-  // 下線をテキストと同じ幅にあわせる
   font-size: 3.75rem;
   font-weight: 300;
   letter-spacing: 0.03em;
@@ -91,7 +90,6 @@ li {
     }
   }
 
-  // jquery.js使用時はコメントアウトする
   &.inview {
     transform: rotate(-90deg) translateY(0px);
   }
@@ -114,11 +112,13 @@ li {
       background-image: url(../images/twitter.svg);
     }
   }
+
   &.facebook {
     &::before {
       background-image: url(../images/facebook.svg);
     }
   }
+
   &.instagram {
     &::before {
       background-image: url(../images/instagram.svg);
@@ -136,11 +136,6 @@ li {
   top: 0;
   left: 0;
   z-index: 10;
-  
-  // ｍain.js使用時はコメントアウトする
-  // display: none;
-
-  // jquery.js使用時はコメントアウトする
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
@@ -302,14 +297,12 @@ Mainvisual
   &__inner {
     display: flex;
     justify-content: center;
-    // スクロールで画像を拡大させた際に、横スクロールが出ないよう設定
     overflow-x: hidden;
   }
 
   &__img {
     width: calc(100% / 3);
     height: 100vh;
-    // スクロールで画像を拡大させた際に、画像が縮まないように設定
     flex-shrink: 0;
     object-fit: cover;
   }
