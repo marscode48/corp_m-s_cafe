@@ -7,7 +7,6 @@ class Main {
     this.side = document.querySelector('#side-btn');
     this.bg = document.querySelector('.bg');
     this._init();
-    this._scrollInit();
   }
 
   _init() {
@@ -15,6 +14,11 @@ class Main {
     new MenuOpen();
     new MenuFadeIn(520);
     new SmoothScroll(80);
+    Pace.on('done', this._paceDone.bind(this));
+  }
+
+  _paceDone() {
+    this._scrollInit();
   }
 
   _inviewAnimation(el, inview) {
