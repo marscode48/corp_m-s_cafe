@@ -1042,7 +1042,7 @@ Mainvisual
 .mainvisual__footer {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 60px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 1;
