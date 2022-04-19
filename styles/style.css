@@ -714,8 +714,10 @@ li {
   opacity: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .site-title.inview {
@@ -753,8 +755,10 @@ li {
   bottom: 250px;
   -webkit-transform: rotate(-90deg) translateY(60px);
           transform: rotate(-90deg) translateY(60px);
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
   z-index: 30;
 }
 
@@ -765,8 +769,8 @@ li {
   letter-spacing: 0.1em;
   text-align: start;
   padding: 10px 0 10px 40px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   border-left: solid 1px #fff;
 }
 
@@ -826,8 +830,8 @@ li {
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .bg.inview {
@@ -845,8 +849,8 @@ li {
   z-index: 40;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
 }
 
 .header__logo a {
@@ -878,8 +882,8 @@ li {
   z-index: 40;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .header__hamburger span {
@@ -888,8 +892,10 @@ li {
   background-color: #fff;
   position: absolute;
   left: 6px;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .header__hamburger span:nth-child(1) {
@@ -928,8 +934,8 @@ li {
   text-align: center;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
   z-index: 30;
 }
 
