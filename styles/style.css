@@ -855,16 +855,10 @@ li {
 
 .header__logo a {
   display: block;
-  height: 30px;
 }
 
 .header__logo a img {
-  width: 30px;
-}
-
-.header__logo a span {
-  font-size: 1.25rem;
-  line-height: 30px;
+  width: 150px;
 }
 
 .header__logo.inview, .header__hamburger.inview {
@@ -1373,16 +1367,10 @@ Footer
 
 .footer__logo a {
   display: block;
-  height: 30px;
 }
 
 .footer__logo a img {
-  width: 30px;
-}
-
-.footer__logo a span {
-  font-size: 1.25rem;
-  line-height: 30px;
+  width: 150px;
 }
 
 .footer__ask p {
