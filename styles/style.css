@@ -845,7 +845,7 @@ li {
 .header__logo {
   position: fixed;
   top: 30px;
-  left: 30px;
+  left: 5%;
   z-index: 40;
   visibility: hidden;
   opacity: 0;
@@ -878,7 +878,7 @@ li {
   cursor: pointer;
   position: fixed;
   top: 20px;
-  right: 25px;
+  right: 5%;
   z-index: 40;
   visibility: hidden;
   opacity: 0;
