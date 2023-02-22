@@ -1,0 +1,751 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+html {
+  font-size: 100%;
+}
+body {
+  color: $cBlack;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+a {
+  color: $cWhite;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+
+/* 共通クラス */
+.site-title {
+  font-size: 6.25rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin: 100px 0;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: transform 1s;
+
+  &.inview {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+}
+.section-title {
+  border-bottom: solid 1px $cWhite;
+  display: inline-block;
+  font-size: 3.75rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-bottom: 45px;
+}
+.wrapper {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.container {
+  background: $cBlack;
+  color: $cWhite;
+  text-align: center;
+}
+
+
+/* サイドボタン */
+.side-btn {
+  border: solid 1px $cWhite;
+  position: fixed;
+  right: -200px;
+  bottom: 250px;
+  transform: rotate(-90deg) translateY(60px);
+  transition: transform 0.6s;
+  z-index: 30;
+  
+  & a {
+    width: 140px;
+    font-size: 0.875rem;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    text-align: start;
+    padding: 10px 0 10px 40px;
+    transition: opacity 0.3s;
+    border-left: solid 1px $cWhite;
+    
+    &:first-of-type {
+      border-left: none;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &.inview {
+    transform: rotate(-90deg) translateY(0px);
+  }
+}
+
+
+/* アイコン */
+.icon {
+  position: relative;
+
+  @include p-base($left: 14%, $top: 50%, $width: 1em, $height: 1em) {
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &.twitter {
+    &::before {
+      background-image: url(../images/twitter.svg);
+    }
+  }
+
+  &.facebook {
+    &::before {
+      background-image: url(../images/facebook.svg);
+    }
+  }
+
+  &.instagram {
+    &::before {
+      background-image: url(../images/instagram.svg);
+    }
+  }
+}
+
+
+/* Locationの背景画像 */
+.bg {
+  background: url("../images/bg.jpg") center center repeat !important;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s;
+
+  &.inview {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+.header {
+  &__logo {
+    position: fixed;
+    top: 30px;
+    left: 5%;
+    z-index: 40;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s;
+
+    
+    & a {
+      display: block;
+      
+      & img {
+        width: 150px;
+      }
+    }
+
+    &.inview {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  
+  &__hamburger {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    position: fixed;
+    top: 25px;
+    right: 5%;
+    z-index: 40;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    
+    & span {
+      width: 30px;
+      height: 1px;
+      background-color: $cWhite;
+      position: absolute;
+      left: 6px;
+      transition: transform 0.5s ease-in-out;
+      
+      &:nth-child(1) {
+        top: 11px;
+      }
+      &:nth-child(2) {
+        top: 21px;
+      }
+      &:nth-child(3) {
+        top: 31px;
+      }
+    }
+
+    &.active span:nth-child(1) {
+      top: 21px;
+      left: 6px;
+      transform: rotate(-45deg);
+    }
+
+    &.active span:nth-child(2),
+    &.active span:nth-child(3) {
+      top: 21px;
+      transform: rotate(45deg);
+    }
+
+    &.inview {
+      // @extend .header__logo.inview;
+      // エラーのため一時的にコメントアウト
+    }
+  }
+
+  
+  &__navi {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: all 0.6s;
+    z-index: 30;
+
+    & ul {
+      width: 100%;
+      padding: 80px 0 30px 0;
+      perspective: 2000px;
+      transform-style: preserve-3d;
+  
+      & li {
+        color: $cWhite;
+        padding: 20px 0;
+        transform: translate3d(0, 0, -1000px);
+        transition: transform 1s, opacity 1s;
+        opacity: 0;
+  
+        & a {
+          display: block;
+        }
+      }
+    }
+
+    &.active {
+      transform: translateY(0%);
+
+      & li {
+        transform: none;
+        opacity: 1;
+
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+              transition-delay: $i * 0.1s;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+.mainvisual {
+  position: relative;
+
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 100px black;
+    z-index: 2;
+  }
+  
+  &__inner {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  &__img {
+    width: calc(100% / 3);
+    height: 100vh;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  &__footer {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    z-index: 1;
+    height: 150px;
+    width: 40px;
+    overflow: hidden;
+  }
+
+  &__downarrow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 15px;
+    @include animation(
+      $name: kf-arrow-anime,
+      $iteration-count: infinite,
+      $duration: 2s,
+      $timing-function: linear
+    );
+  }
+
+  &__scrolltext {
+    position: absolute;
+    transform: rotate(90deg);
+    left: -8px;
+    top: 15px;
+    font-size: 1.75rem;
+    opacity: 0.7;
+  }
+}
+
+@keyframes kf-arrow-anime {
+  0%,
+  50%,
+  100% {
+    transform: translateY(-10%);
+  }
+  30% {
+    transform: none;
+  }
+}
+
+
+/*-------------------------------------------
+News
+-------------------------------------------*/
+.news {
+  margin-bottom: 140px;
+  font-size: 0.8rem;
+
+  &__list {
+    border-top: 1px solid #C8C8C8;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__date {
+    width: 20%;
+    padding: 15px;
+    border-bottom: 1px solid #C8C8C8;
+  }
+
+  &__title {
+    border-bottom: 1px solid #C8C8C8;
+    width: 80%;
+    padding: 15px;
+  }
+}
+
+
+/*-------------------------------------------
+Menu
+-------------------------------------------*/
+.menu {
+  margin-bottom: 480px;
+
+  &__inner {
+    background-color: $cBgGray;
+    padding: 50px 100px;
+
+  }
+  
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 0;
+    
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      & .menu__title::before {
+        left: 200px;
+        transform-origin: left;
+      }
+
+      & .menu__texts-inner {
+        text-align: right;
+      }
+    }
+  }
+
+  &__img {
+    flex-basis: 50%;
+    height: 400px;
+    transition: box-shadow 1ms linear 0.8s;
+
+    & > img {
+      position: relative;
+      z-index: -1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &.inview {
+      box-shadow: inset 0 0 30px $cBlack;
+    }
+  }
+
+  &__texts {
+    flex-basis: 35%;
+    display: flex;
+    align-items: flex-end;
+
+    &.inview {
+      & .menu__title::before {
+        transform: translateY(-50%);
+      }
+    }
+
+    &-inner {
+      padding-bottom: 43px;
+      text-align: left;
+    }
+  }
+
+
+  &__title {
+    position: relative;
+    margin-bottom: 10px;
+    
+    @include p-base(
+      $display: block,
+      $width: 85px,
+      $height: 1px,
+      $top: 50%,
+      $left: -95px
+    ) {
+      background-color: $cWhite;
+      transform: translateY(-50%) scaleX(0);
+      transition: transform 0.3s ease 1.6s;
+      transform-origin: right;
+    }
+  }
+
+  &__price {
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    a {
+      display: block;
+    }
+  }
+}
+
+
+/*-------------------------------------------
+Location
+-------------------------------------------*/
+.location {
+  margin-bottom: 480px;
+  position: relative;
+  z-index: 20;
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__address, &__open, &__contact {
+    margin-bottom: 20px;
+  }
+
+  & .btn {
+    color: $cWhite;
+    background-color: transparent;
+    border: 1px solid $cWhite;
+    font-weight: 300;
+
+    &.slide-bg::before {
+      background: $cWhite;
+    }
+
+    &.slide-bg:hover {
+      color: $cBlack;
+    }
+  }
+}
+
+
+/*-------------------------------------------
+Feature
+-------------------------------------------*/
+.feature {
+  margin-bottom: 200px;
+  position: relative;
+  z-index: 20;
+
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__img {
+    width: 55%;
+    position: relative;
+    overflow: hidden;
+    
+    & img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    width: 45%;
+    padding: 0 5%;
+
+    & .en {
+      display: block;
+      letter-spacing: 0.3em;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    & .ja {
+      display: block;
+      margin-bottom: 36px;
+    }
+
+    & p {
+      text-align: left;
+    }
+  }
+}
+
+
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: solid 1px $cWhite;
+  font-size: 0.75rem;
+  padding: 80px 5%;
+  text-align: left;
+
+  &__logo {
+    margin-bottom: 15px;
+
+    & a {
+      display: block;
+      
+      & img {
+        width: 150px;
+      }
+    }
+  }
+
+  &__ask {
+    & p {
+      line-height: 1.6;
+    }
+  }
+
+  &__sns {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    & li {
+      & a {
+        padding: 0 15px;
+      }
+    }
+
+    & .icon::before {
+      left: 0;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+
+    & li:last-child {
+      margin-left: 15px;
+    }
+  }
+}
+
+  /******************************************************************
+
+  Stylesheet: 900px以下のモニタで適用
+
+  ******************************************************************/
+
+  .site-title {
+    font-size: 3rem;
+    margin: 50px 0;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  // jQuery使用時はコメントアウトする
+  .side-btn {
+    display: none;
+  }
+
+
+  /*-------------------------------------------
+  News
+  -------------------------------------------*/
+  .news {
+    margin-bottom: 80px;
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__date {
+      width: 100%;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &__title {
+      width: 100%;
+      padding-top: 0;
+    }
+  }
+
+
+  /*-------------------------------------------
+  Menu
+  -------------------------------------------*/
+  .menu {
+    margin-bottom: 280px;
+    
+    &__inner {
+      padding: 15px;
+    }
+
+    &__flex {
+      flex-direction: column;
+
+      &:nth-child(even) {
+        flex-direction: column;
+
+        & .menu__texts-inner {
+          text-align: center;
+        }
+      }
+    }
+
+    &__img {
+      flex-basis: auto;
+    }
+
+    &__texts {
+      flex-basis: auto;
+    }
+
+    &__texts-inner {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &__title {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+
+  /*-------------------------------------------
+  Location
+  -------------------------------------------*/
+  .location {
+    margin-bottom: 280px;
+  }
+
+
+  /*-------------------------------------------
+  Feature
+  -------------------------------------------*/
+  .feature {
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 100%;
+      margin-bottom: 30px;
+
+      & img {
+        height: 300px;
+      }
+    }
+
+    &__text {
+      width: 100%;
+      padding: 0 3%;
+    }
+  }
+
+
+  /*-------------------------------------------
+  Footer
+  -------------------------------------------*/
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 5%;
+
+    &__sns {
+      margin-bottom: 30px;
+    }
+  }

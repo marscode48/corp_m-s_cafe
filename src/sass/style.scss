@@ -1,0 +1,16 @@
+// @import 'modules/variables';
+// @import 'modules/mixin';
+// @import 'modules/appear';
+// @import 'modules/button';
+// @import 'modules/text-animation';
+// @import 'modules/image-slide';
+// @import "breakpoints/base";
+
+// @media (max-width: 900px) {
+//   @import "breakpoints/900min";
+// }
+
+@use 'parts/appear'; // appearアニメーション
+@use 'parts/mobile-menu'; // モバイルメニュー
+
+@use "pages/home"; // トップ画面スタイル（ページ毎に作成）
