@@ -254,6 +254,10 @@ li {
   top: 21px;
   transform: rotate(45deg);
 }
+.header__hamburger.inview {
+  visibility: visible;
+  opacity: 1;
+}
 .header__navi {
   height: 100vh;
   width: 100%;

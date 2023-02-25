@@ -222,8 +222,8 @@ li {
     }
 
     &.inview {
-      // @extend .header__logo.inview;
-      // エラーのため一時的にコメントアウト
+      visibility: visible;
+      opacity: 1;
     }
   }
 
