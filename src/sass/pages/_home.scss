@@ -291,66 +291,68 @@ li {
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
-.mainvisual {
-  position: relative;
+
+
+// .mainvisual {
+//   position: relative;
   
-  &__inner {
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
-  }
+//   &__inner {
+//     display: flex;
+//     justify-content: center;
+//     overflow-x: hidden;
+//   }
 
-  &__img {
-    width: calc(100% / 3);
-    height: 100vh;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
+//   // &__img {
+//   //   width: calc(100% / 3);
+//   //   height: 100vh;
+//   //   flex-shrink: 0;
+//   //   object-fit: cover;
+//   // }
 
-  &__footer {
-    position: absolute;
-    left: 50%;
-    bottom: 60px;
-    transform: translateX(-50%);
-    z-index: 1;
-    height: 150px;
-    width: 40px;
-    overflow: hidden;
-  }
+//   &__footer {
+//     position: absolute;
+//     left: 50%;
+//     bottom: 60px;
+//     transform: translateX(-50%);
+//     z-index: 1;
+//     height: 150px;
+//     width: 40px;
+//     overflow: hidden;
+//   }
 
-  &__downarrow {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 15px;
-    @include animation(
-      $name: kf-arrow-anime,
-      $iteration-count: infinite,
-      $duration: 2s,
-      $timing-function: linear
-    );
-  }
+//   &__downarrow {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     width: 15px;
+//     @include animation(
+//       $name: kf-arrow-anime,
+//       $iteration-count: infinite,
+//       $duration: 2s,
+//       $timing-function: linear
+//     );
+//   }
 
-  &__scrolltext {
-    position: absolute;
-    transform: rotate(90deg);
-    left: -8px;
-    top: 15px;
-    font-size: 1.75rem;
-    opacity: 0.7;
-  }
+//   &__scrolltext {
+//     position: absolute;
+//     transform: rotate(90deg);
+//     left: -8px;
+//     top: 15px;
+//     font-size: 1.75rem;
+//     opacity: 0.7;
+//   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 100px $cBlack;
-  }
-}
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     z-index: 2;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     box-shadow: inset 0 0 100px $cBlack;
+//   }
+// }
 
 @keyframes kf-arrow-anime {
   0%,

@@ -54,6 +54,33 @@
   transition-delay: 1s;
 }
 
+.gsap-top {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.gsap-top-title {
+  font-size: 120px;
+  color: #fff;
+  font-family: "EB Garamond", serif;
+  z-index: 1;
+}
+.gsap-top-title__left, .gsap-top-title__right {
+  display: inline-block;
+}
+.gsap-top-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: url("https://picsum.photos/id/1021/1920/1200") no-repeat top/cover;
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -330,70 +357,6 @@ li {
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
-.mainvisual {
-  position: relative;
-}
-.mainvisual__inner {
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-}
-.mainvisual__img {
-  width: 33.3333333333%;
-  height: 100vh;
-  flex-shrink: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.mainvisual__footer {
-  position: absolute;
-  left: 50%;
-  bottom: 60px;
-  transform: translateX(-50%);
-  z-index: 1;
-  height: 150px;
-  width: 40px;
-  overflow: hidden;
-}
-.mainvisual__downarrow {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 15px;
-  -webkit-animation-name: kf-arrow-anime;
-          animation-name: kf-arrow-anime;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.mainvisual__scrolltext {
-  position: absolute;
-  transform: rotate(90deg);
-  left: -8px;
-  top: 15px;
-  font-size: 1.75rem;
-  opacity: 0.7;
-}
-.mainvisual::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 100px #050507;
-}
-
 @-webkit-keyframes kf-arrow-anime {
   0%, 50%, 100% {
     transform: translateY(-10%);
@@ -402,7 +365,6 @@ Mainvisual
     transform: none;
   }
 }
-
 @keyframes kf-arrow-anime {
   0%, 50%, 100% {
     transform: translateY(-10%);

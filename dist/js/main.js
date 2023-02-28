@@ -24,6 +24,7 @@ var Main = /*#__PURE__*/function () {
     key: "_init",
     value: function _init() {
       // new MvScaleChange();
+      gsap.registerPlugin(ScrollTrigger);
       new MenuOpen();
       new MenuFadeIn(520);
       new SmoothScroll(80);
@@ -33,6 +34,13 @@ var Main = /*#__PURE__*/function () {
     key: "_paceDone",
     value: function _paceDone() {
       this._scrollInit();
+    }
+  }, {
+    key: "_topScrollAnimation",
+    value: function _topScrollAnimation(el, inview) {
+      if (inview) {
+        new TopScrollAnimation(el);
+      }
     }
   }, {
     key: "_inviewAnimation",
@@ -70,6 +78,7 @@ var Main = /*#__PURE__*/function () {
   }, {
     key: "_scrollInit",
     value: function _scrollInit() {
+      new ScrollObserver('.gsap-top', this._topScrollAnimation);
       new ScrollObserver('.menu__item', this._inviewAnimation);
       new ScrollObserver('.site-title', this._inviewAnimation);
       new ScrollObserver('.cover-slide', this._inviewAnimation);

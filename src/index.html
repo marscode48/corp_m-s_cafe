@@ -41,15 +41,13 @@
       <div class="container">
         <main>
           <!-- メインビジュアル -->
-          <div class="mainvisual">
-            <div class="mainvisual__inner">
-              <img src="images/mainvisual1.jpg" alt="" class="mainvisual__img">
-              <img src="images/mainvisual2.jpg" alt="" class="mainvisual__img">
-              <img src="images/mainvisual3.jpg" alt="" class="mainvisual__img">
-              <div class="mainvisual__footer">
-                <img src="images/arrow.svg" alt="" class="mainvisual__downarrow">
-                <span class="mainvisual__scrolltext">scroll</span>
-              </div>
+          <div class="mainvisual gsap-top">
+            <div class="gsap-top-title">
+              <span class="gsap-top-title__left">Welcome!</span
+              ><br>
+              <span class="gsap-top-title__right">MarsCafe</span>
+            </div>
+            <div class="gsap-top-image">
             </div>
           </div>
   
@@ -260,15 +258,18 @@
         </footer>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="js/vendors/scroll-polyfill.js"></script>
-    <script src="js/vendors/gsap.min.js"></script>
+    <!-- <script src="js/vendors/gsap.min.js"></script> -->
     <script src="js/libs/mv-scale.js"></script>
     <script src="js/libs/menu-open.js"></script>
     <script src="js/libs/smooth-scroll.js"></script>
     <script src="js/libs/menu-fadein.js"></script>
     <script src="js/libs/text-animation.js"></script>
     <script src="js/libs/scroll-observer.js"></script>
+    <script src="js/libs/gsap-animation.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
