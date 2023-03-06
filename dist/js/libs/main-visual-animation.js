@@ -148,4 +148,4 @@ var MainVisualAnimation = /*#__PURE__*/function () {
 
   return MainVisualAnimation;
 }();
-//# sourceMappingURL=gsap-animation.js.map
+//# sourceMappingURL=main-visual-animation.js.map

@@ -10,7 +10,6 @@ class Main {
   }
 
   _init() {
-    // new MvScaleChange();
     gsap.registerPlugin(ScrollTrigger);
     new MenuOpen();
     new MenuFadeIn(520);
@@ -22,9 +21,9 @@ class Main {
     this._scrollInit();
   }
 
-  _topScrollAnimation(el, inview) {
+  _mainVisualAnimation(el, inview) {
     if (inview) {
-      new TopScrollAnimation(el);
+      new MainVisualAnimation(el);
     }
   }
 
@@ -58,7 +57,7 @@ class Main {
   }
 
   _scrollInit() {
-    new ScrollObserver('.gsap-top', this._topScrollAnimation);
+    new ScrollObserver('.gsap-top', this._mainVisualAnimation);
     new ScrollObserver('.menu__item', this._inviewAnimation);
     new ScrollObserver('.site-title', this._inviewAnimation);
     new ScrollObserver('.cover-slide', this._inviewAnimation);
