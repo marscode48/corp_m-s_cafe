@@ -16,7 +16,7 @@
   <body>
     <div class="global-container">
       <header id="header" class="header">
-        <div class="header__logo">
+        <div class="header__logo gsap-top-logo">
           <a href="#header"><img src="images/logo.png" alt="Mars Cafe"></a>
         </div>
   
@@ -31,7 +31,7 @@
           </ul>
         </nav>
   
-        <div class="header__hamburger">
+        <div class="header__hamburger gsap-top-hamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -48,9 +48,14 @@
               <span class="gsap-top-title__right">MarsCafe</span>
             </div>
             <div class="gsap-top-image">
+              <img src="./images/mainvisual2.jpg" alt="">
+            </div>
+            <div class="gsap-top-bg__left"></div>
+            <div class="gsap-top-bg__right"></div>
+            <div class="gsap-top-scroll">
+              <span>scroll</span>
             </div>
           </div>
-  
   
           <!-- サイトタイトル -->
           <h1 class="site-title">Welcome!<br>Mars Cafe</h1>
@@ -262,14 +267,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="js/vendors/scroll-polyfill.js"></script>
-    <!-- <script src="js/vendors/gsap.min.js"></script> -->
-    <script src="js/libs/mv-scale.js"></script>
+    <script src="js/libs/main-visual-animation.js"></script>
     <script src="js/libs/menu-open.js"></script>
     <script src="js/libs/smooth-scroll.js"></script>
     <script src="js/libs/menu-fadein.js"></script>
     <script src="js/libs/text-animation.js"></script>
     <script src="js/libs/scroll-observer.js"></script>
-    <script src="js/libs/gsap-animation.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
