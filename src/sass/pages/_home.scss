@@ -158,10 +158,8 @@ li {
     top: 30px;
     left: 5%;
     z-index: 40;
-    // visibility: hidden;
-    // opacity: 0;
-    // transition: opacity 0.6s;
-
+    /* 余白消し */
+    line-height: 1px;
     
     & a {
       display: block;
@@ -174,11 +172,6 @@ li {
         }
       }
     }
-
-    // &.inview {
-    //   visibility: visible;
-    //   opacity: 1;
-    // }
   }
 
   
@@ -194,9 +187,6 @@ li {
     @include mq(lg) {
       top: 30px;
     }
-    // visibility: hidden;
-    // opacity: 0;
-    // transition: all 0.6s;
     
     & span {
       width: 30px;
@@ -228,11 +218,6 @@ li {
       top: 21px;
       transform: rotate(45deg);
     }
-
-    // &.inview {
-    //   visibility: visible;
-    //   opacity: 1;
-    // }
   }
 
   

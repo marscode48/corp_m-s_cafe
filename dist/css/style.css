@@ -314,6 +314,8 @@ li {
   top: 30px;
   left: 5%;
   z-index: 40;
+  /* 余白消し */
+  line-height: 1px;
 }
 .header__logo a {
   display: block;
