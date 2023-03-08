@@ -1,5 +1,18 @@
 @use "../globals" as *;
 
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+
+  @include mq(lg) {
+    margin-bottom: 150px !important;
+  }
+}
+
+
 // font
 .font-sm {
   font-size: 14px;

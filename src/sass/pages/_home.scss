@@ -46,20 +46,29 @@ li {
 .section-title {
   border-bottom: solid 1px $cWhite;
   display: inline-block;
-  font-size: 3.75rem;
-  font-weight: 300;
-  letter-spacing: 0.03em;
+  @extend .font-lr;
+  font-weight: 700;
   margin-bottom: 45px;
+  margin: 20px auto 0;
+}
+.section-read {
+  font-weight: 400;
+  @extend .font-lr;
+  margin: 40px auto 0;
+  letter-spacing: 4px;
 }
 .wrapper {
-  max-width: 800px;
-  padding: 0 30px;
+  // max-width: 800px;
+  // padding: 0 30px;
+  // margin: 0 auto;
+  width: 90%;
   margin: 0 auto;
+  max-width: $contentMaxWidth;
 }
 .container {
   background: $cBlack;
   color: $cWhite;
-  text-align: center;
+  // text-align: center;
 }
 
 
@@ -286,21 +295,21 @@ Mainvisual
 -------------------------------------------*/
 
 
-// .mainvisual {
-//   position: relative;
+.mainvisual {
+  @extend .mb-lg;
   
-//   &__inner {
-//     display: flex;
-//     justify-content: center;
-//     overflow-x: hidden;
-//   }
+  // &__inner {
+  //   display: flex;
+  //   justify-content: center;
+  //   overflow-x: hidden;
+  // }
 
-//   // &__img {
-//   //   width: calc(100% / 3);
-//   //   height: 100vh;
-//   //   flex-shrink: 0;
-//   //   object-fit: cover;
-//   // }
+  // &__img {
+  //   width: calc(100% / 3);
+  //   height: 100vh;
+  //   flex-shrink: 0;
+  //   object-fit: cover;
+  // }
 
 //   &__footer {
 //     position: absolute;
@@ -347,15 +356,15 @@ Mainvisual
 //   }
 // }
 
-@keyframes kf-arrow-anime {
-  0%,
-  50%,
-  100% {
-    transform: translateY(-10%);
-  }
-  30% {
-    transform: none;
-  }
+// @keyframes kf-arrow-anime {
+//   0%,
+//   50%,
+//   100% {
+//     transform: translateY(-10%);
+//   }
+//   30% {
+//     transform: none;
+//   }
 }
 
 
@@ -391,94 +400,68 @@ News
 Menu
 -------------------------------------------*/
 .menu {
-  margin-bottom: 480px;
-
+  @extend .mb-lg;
+  
   &__inner {
     background-color: $cBgGray;
-    padding: 50px 100px;
+    background: url("../../images/menu-bg.jpg") no-repeat center center / cover;
+    min-height: 800px;
 
+    & > .appear.up {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   
-  &__flex {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1em;
+    padding: 15px 0 30px 0;
+
+    @include mq(lg) {
+      padding: 30px 0 60px 0;
+      column-gap: 20px;
+    }
+  }
+
+  &__item {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    position: relative;
-    z-index: 0;
-    
-    &:nth-child(even) {
-      flex-direction: row-reverse;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
 
-      & .menu__title::before {
-        left: 200px;
-        transform-origin: left;
-      }
+    &-flex {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
 
-      & .menu__texts-inner {
-        text-align: right;
-      }
-    }
-  }
-
-  &__img {
-    flex-basis: 50%;
-    height: 400px;
-    transition: box-shadow 1ms linear 0.8s;
-
-    & > img {
-      position: relative;
-      z-index: -1;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-
-    &.inview {
-      box-shadow: inset 0 0 30px $cBlack;
-    }
-  }
-
-  &__texts {
-    flex-basis: 35%;
-    display: flex;
-    align-items: flex-end;
-
-    &.inview {
-      & .menu__title::before {
-        transform: translateY(-50%);
+      @include mq(lg) {
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
 
-    &-inner {
-      padding-bottom: 43px;
-      text-align: left;
+    @include mq(lg) {
+      padding: 30px 100px;
     }
   }
 
-
-  &__title {
-    position: relative;
-    margin-bottom: 10px;
-    
-    @include p-base(
-      $display: block,
-      $width: 85px,
-      $height: 1px,
-      $top: 50%,
-      $left: -95px
-    ) {
-      background-color: $cWhite;
-      transform: translateY(-50%) scaleX(0);
-      transition: transform 0.3s ease 1.6s;
-      transform-origin: right;
-    }
+  &__title, &__price {
+    letter-spacing: 1.5px;
+    @extend .font-sm;
   }
 
-  &__price {
-    margin-bottom: 10px;
+  &__desc {
+    margin-top: 20px;
+    line-height: 1.5;
+    @extend .font-sm;
   }
 
   &__btn {
+    text-align: center;
     a {
       display: block;
     }
@@ -639,9 +622,9 @@ Footer
     font-size: 3rem;
     margin: 50px 0;
   }
-  .section-title {
-    font-size: 2rem;
-  }
+  // .section-title {
+  //   font-size: 2rem;
+  // }
   // jQuery使用時はコメントアウトする
   .side-btn {
     display: none;
@@ -674,47 +657,47 @@ Footer
   /*-------------------------------------------
   Menu
   -------------------------------------------*/
-  .menu {
-    margin-bottom: 280px;
+  // .menu {
+  //   margin-bottom: 280px;
     
-    &__inner {
-      padding: 15px;
-    }
+  //   &__inner {
+  //     padding: 15px;
+  //   }
 
-    &__flex {
-      flex-direction: column;
+  //   &__flex {
+  //     flex-direction: column;
 
-      &:nth-child(even) {
-        flex-direction: column;
+  //     &:nth-child(even) {
+  //       flex-direction: column;
 
-        & .menu__texts-inner {
-          text-align: center;
-        }
-      }
-    }
+  //       & .menu__texts-inner {
+  //         text-align: center;
+  //       }
+  //     }
+  //   }
 
-    &__img {
-      flex-basis: auto;
-    }
+  //   &__img {
+  //     flex-basis: auto;
+  //   }
 
-    &__texts {
-      flex-basis: auto;
-    }
+  //   &__texts {
+  //     flex-basis: auto;
+  //   }
 
-    &__texts-inner {
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
+  //   &__texts-inner {
+  //     width: 100%;
+  //     margin: 0 auto;
+  //     text-align: center;
+  //     padding-top: 30px;
+  //     padding-bottom: 30px;
+  //   }
 
-    &__title {
-      &::before {
-        display: none;
-      }
-    }
-  }
+  //   &__title {
+  //     &::before {
+  //       display: none;
+  //     }
+  //   }
+  // }
 
 
   /*-------------------------------------------

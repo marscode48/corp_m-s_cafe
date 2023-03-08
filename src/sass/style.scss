@@ -11,7 +11,8 @@
 // }
 
 @use 'parts/appear'; // appearアニメーション
+@use 'parts/button'; // appearアニメーション
 @use 'parts/mobile-menu'; // モバイルメニュー
 @use 'parts/top-animation'; // モバイルメニュー
-
+@use 'parts/text-animation'; // モバイルメニュー
 @use "pages/home"; // トップ画面スタイル（ページ毎に作成）
