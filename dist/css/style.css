@@ -454,20 +454,20 @@
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .mainvisual, .menu {
+.mb-lg, .mainvisual, .feature, .menu {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .mainvisual, .menu {
+  .mb-lg, .mainvisual, .feature, .menu {
     margin-bottom: 150px !important;
   }
 }
 
-.font-sm, .menu__title, .menu__price, .menu__desc {
+.font-sm, .feature__text, .menu__title, .menu__price, .menu__desc {
   font-size: 14px;
 }
 @media screen and (min-width: 960px) {
-  .font-sm, .menu__title, .menu__price, .menu__desc {
+  .font-sm, .feature__text, .menu__title, .menu__price, .menu__desc {
     font-size: 16px;
   }
 }
@@ -547,8 +547,7 @@ li {
   border-bottom: solid 1px #fff;
   display: inline-block;
   font-weight: 700;
-  margin-bottom: 45px;
-  margin: 20px auto 0;
+  margin: 0 auto;
 }
 
 .section-read {
@@ -778,6 +777,98 @@ li {
 Mainvisual
 -------------------------------------------*/
 /*-------------------------------------------
+Feature
+-------------------------------------------*/
+.feature {
+  position: relative;
+}
+.feature__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feature__inner .feature__area + .feature__area {
+  margin-top: 90px;
+}
+@media screen and (min-width: 960px) {
+  .feature__inner .feature__area + .feature__area {
+    margin-top: 180px;
+  }
+}
+.feature__area {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-gap: 40px 0;
+}
+@media screen and (min-width: 960px) {
+  .feature__area {
+    height: 400px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-gap: 0 80px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .feature__area:nth-child(2n+1) .feature__content {
+    text-align: end;
+  }
+}
+@media screen and (min-width: 960px) {
+  .feature__area:nth-child(2n) .feature__content {
+    text-align: start;
+    order: 2;
+  }
+}
+@media screen and (min-width: 960px) {
+  .feature__area:nth-child(2n) .feature__figure {
+    order: 1;
+  }
+}
+.feature__content {
+  text-align: center;
+}
+.feature__title {
+  font-size: 1.4rem;
+  letter-spacing: 0.15rem;
+}
+@media screen and (min-width: 960px) {
+  .feature__title {
+    font-size: 1.6rem;
+  }
+}
+.feature__figure {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+@media screen and (min-width: 960px) {
+  .feature__figure {
+    width: 500px;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .feature__figure {
+    width: 600px;
+  }
+}
+.feature__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.feature__text {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+.feature__text p + p {
+  margin-top: 10px;
+}
+
+/*-------------------------------------------
 News
 -------------------------------------------*/
 .news {
@@ -813,6 +904,9 @@ Menu
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.menu__inner h2 {
+  margin-top: 20px;
 }
 .menu__grid {
   display: grid;
@@ -891,47 +985,6 @@ Location
 }
 .location .btn.slide-bg:hover {
   color: #050507;
-}
-
-/*-------------------------------------------
-Feature
--------------------------------------------*/
-.feature {
-  margin-bottom: 200px;
-  position: relative;
-  z-index: 20;
-}
-.feature__inner {
-  display: flex;
-  align-items: flex-end;
-}
-.feature__img {
-  width: 55%;
-  position: relative;
-  overflow: hidden;
-}
-.feature__img img {
-  width: 100%;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.feature__text {
-  width: 45%;
-  padding: 0 5%;
-}
-.feature__text .en {
-  display: block;
-  letter-spacing: 0.3em;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-.feature__text .ja {
-  display: block;
-  margin-bottom: 36px;
-}
-.feature__text p {
-  text-align: left;
 }
 
 /*-------------------------------------------
@@ -1028,21 +1081,6 @@ Location
 /*-------------------------------------------
 Feature
 -------------------------------------------*/
-.feature__inner {
-  flex-direction: column;
-}
-.feature__img {
-  width: 100%;
-  margin-bottom: 30px;
-}
-.feature__img img {
-  height: 300px;
-}
-.feature__text {
-  width: 100%;
-  padding: 0 3%;
-}
-
 /*-------------------------------------------
 Footer
 -------------------------------------------*/
