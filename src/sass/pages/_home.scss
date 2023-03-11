@@ -401,7 +401,7 @@ Feature
       height: 400px;
       grid-template-columns: 1fr 1fr;
       justify-content: center;
-      grid-gap: 0 80px;
+      grid-gap: 0 60px;
     }
 
     &:nth-child(2n+1) {
@@ -433,11 +433,11 @@ Feature
   }
 
   &__title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     letter-spacing: 0.15rem;
 
     @include mq(lg) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 
@@ -447,12 +447,11 @@ Feature
     overflow: hidden;
     
     @include mq(lg) {
-      width: 500px;
       height: 400px;
     }
 
     @include mq(xl) {
-      width: 600px;
+      height: 500px;
     }
   }
 
