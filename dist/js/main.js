@@ -42,6 +42,13 @@ var Main = /*#__PURE__*/function () {
       }
     }
   }, {
+    key: "_featureAnimation",
+    value: function _featureAnimation(el, inview) {
+      if (inview) {
+        new FeatureAnimation(el);
+      }
+    }
+  }, {
     key: "_inviewAnimation",
     value: function _inviewAnimation(el, inview) {
       if (inview) {
@@ -78,6 +85,7 @@ var Main = /*#__PURE__*/function () {
     key: "_scrollInit",
     value: function _scrollInit() {
       new ScrollObserver('.gsap-top', this._mainVisualAnimation);
+      new ScrollObserver('.gsap-feature', this._featureAnimation);
       new ScrollObserver('.menu__item', this._inviewAnimation);
       new ScrollObserver('.site-title', this._inviewAnimation);
       new ScrollObserver('.cover-slide', this._inviewAnimation);

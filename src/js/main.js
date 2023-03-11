@@ -27,6 +27,12 @@ class Main {
     }
   }
 
+  _featureAnimation(el, inview) {
+    if (inview) {
+      new FeatureAnimation(el);
+    }
+  }
+
   _inviewAnimation(el, inview) {
     if (inview) {
       el.classList.add('inview');
@@ -58,6 +64,7 @@ class Main {
 
   _scrollInit() {
     new ScrollObserver('.gsap-top', this._mainVisualAnimation);
+    new ScrollObserver('.gsap-feature', this._featureAnimation);
     new ScrollObserver('.menu__item', this._inviewAnimation);
     new ScrollObserver('.site-title', this._inviewAnimation);
     new ScrollObserver('.cover-slide', this._inviewAnimation);
