@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  window.scroll({ top: 0, behavior: 'smooth' });
+  ScrollTrigger.refresh();
   const main = new Main();
 });
 
