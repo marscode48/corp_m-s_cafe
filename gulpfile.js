@@ -38,8 +38,8 @@ function icon(done) {
 function resize() {
   return src("./src/resize/**")
     .pipe($.imageResize({
-      width: 1024,
-      height: 768,
+      width: 720,
+      height: 1280,
       crop: true,
       upscale: false,
     }))
