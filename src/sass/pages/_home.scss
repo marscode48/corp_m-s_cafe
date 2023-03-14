@@ -48,7 +48,7 @@ li {
   display: inline-block;
   @extend .font-lr;
   font-weight: 700;
-  margin: 0 auto;
+  // margin: 0 auto;
 }
 .section-read {
   font-weight: 400;
@@ -388,6 +388,15 @@ Feature
         margin-top: 180px;
       }
     }
+
+    .section-title {
+      font-size: 1.2rem;
+      letter-spacing: 0.15rem;
+  
+      @include mq(lg) {
+        font-size: 1.4rem;
+      }
+    }
   }
 
   &__area {
@@ -430,15 +439,6 @@ Feature
 
   &__content {
     text-align: center;
-  }
-
-  &__title {
-    font-size: 1.2rem;
-    letter-spacing: 0.15rem;
-
-    @include mq(lg) {
-      font-size: 1.4rem;
-    }
   }
 
   &__figure {
@@ -528,8 +528,8 @@ Menu
       justify-content: center;
     }
 
-    & h2 {
-      margin-top: 20px;
+    .section-title {
+      margin: 20px auto 0;
     }
   }
   
@@ -584,6 +584,131 @@ Menu
     a {
       display: block;
     }
+  }
+}
+
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+.about {
+  
+  &__inner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 50%;
+      width: 100%;
+      background: #423012;
+    } 
+  }
+
+  &__container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    & .section-title {
+      margin: 0 0 30px 0;
+    }
+  }  
+
+  &__ul {
+    display: inline-flex;
+    gap: 50px;
+
+    @include mq(lg) {
+      gap: 80px;
+    }
+  }
+
+  &__li {
+    position: relative;
+    display: flex;
+    flex-direction: column;    
+    width: 60vw;
+    text-align: center;
+    align-items: center;
+    counter-increment: num 1;
+    background-color: #4e4e4e;
+    border: 1px solid $cWhite;
+    box-shadow: rgba(255 255 255 / 0.3) 0px 7px 29px 0px;
+    
+    &::before {
+      content: counter(num, decimal-leading-zero);
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      font-size: 1.5em;
+      color: $cWhite;
+      font-weight: bold;
+      z-index: 2;
+
+      @include mq(lg) {
+        font-size: 2em;    
+      }
+    }
+
+    @include mq(md) {
+      width: 50vw;
+    }
+
+    @include mq(lg) {
+      width: 35vw;
+    }
+
+    @include mq(xl) {
+      width: 20vw;
+    }
+  }
+
+  &__image {
+    height: 30vh;
+    width: 100%;
+    overflow: hidden;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      @include mq(lg) {
+        &:hover {
+          scale: (1.05);
+          transition: scale 1s ease;
+        }
+      }
+    }
+
+    @include mq(md) {
+      height: 40vh;
+    }
+  }
+
+  &__read {
+    margin-top: 10px;
+    font-size: 0.6em;
+    letter-spacing: 0.5em;
+  }
+
+  &__title {
+    font-weight: bold;
+    @extend .font-md;
+    margin-top: 10px;
+  }
+
+  &__text {
+    font-size: 0.8em;
+    line-height: 1.8;
+    padding: 10px 1em;
   }
 }
 
