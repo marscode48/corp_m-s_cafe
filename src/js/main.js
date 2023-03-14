@@ -35,6 +35,12 @@ class Main {
     }
   }
 
+  _aboutAnimation(el, inview) {
+    if (inview) {
+      new AboutAnimation(el);
+    }
+  }
+
   _inviewAnimation(el, inview) {
     if (inview) {
       el.classList.add('inview');
@@ -67,12 +73,13 @@ class Main {
   _scrollInit() {
     new ScrollObserver('.gsap-top', this._mainVisualAnimation);
     new ScrollObserver('.gsap-feature', this._featureAnimation);
+    new ScrollObserver('.gsap-about', this._aboutAnimation);
     new ScrollObserver('.menu__item', this._inviewAnimation);
     new ScrollObserver('.site-title', this._inviewAnimation);
     new ScrollObserver('.cover-slide', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
     new ScrollObserver('.tween-animate-title', this._textAnimation, { rootMargin: '-100px 0px' });
     new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
-    new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
+    // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
   }
 }

@@ -28,8 +28,7 @@ var FeatureAnimation = /*#__PURE__*/function () {
           trigger: this.DOM.el,
           start: 'top+=100 bottom',
           end: 'top-=100 top',
-          scrub: 1,
-          markers: true
+          scrub: 1
         }
       }); // アニメーション
 

@@ -18,7 +18,6 @@ class FeatureAnimation {
         start: 'top+=100 bottom',
         end: 'top-=100 top',
         scrub: 1,
-        markers: true,
       },
     });
 

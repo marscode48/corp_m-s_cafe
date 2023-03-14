@@ -54,6 +54,13 @@ var Main = /*#__PURE__*/function () {
       }
     }
   }, {
+    key: "_aboutAnimation",
+    value: function _aboutAnimation(el, inview) {
+      if (inview) {
+        new AboutAnimation(el);
+      }
+    }
+  }, {
     key: "_inviewAnimation",
     value: function _inviewAnimation(el, inview) {
       if (inview) {
@@ -91,6 +98,7 @@ var Main = /*#__PURE__*/function () {
     value: function _scrollInit() {
       new ScrollObserver('.gsap-top', this._mainVisualAnimation);
       new ScrollObserver('.gsap-feature', this._featureAnimation);
+      new ScrollObserver('.gsap-about', this._aboutAnimation);
       new ScrollObserver('.menu__item', this._inviewAnimation);
       new ScrollObserver('.site-title', this._inviewAnimation);
       new ScrollObserver('.cover-slide', this._inviewAnimation);
@@ -101,11 +109,7 @@ var Main = /*#__PURE__*/function () {
       new ScrollObserver('#menu', this._sideAnimation.bind(this), {
         once: false,
         rootMargin: '-300px 0px 0px 0px'
-      });
-      new ScrollObserver('#location', this._fadeInAnimation.bind(this), {
-        once: false,
-        rootMargin: '-300px 0px 0px 0px'
-      });
+      }); // new ScrollObserver('#location', this._fadeInAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
     }
   }]);
 
