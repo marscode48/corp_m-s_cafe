@@ -53,7 +53,7 @@ li {
 .section-read {
   font-weight: 400;
   @extend .font-lr;
-  margin: 40px auto 0;
+  // margin: 40px auto 0;
   letter-spacing: 4px;
 }
 .wrapper {
@@ -474,38 +474,10 @@ Feature
 
 
 /*-------------------------------------------
-News
--------------------------------------------*/
-.news {
-  margin-bottom: 140px;
-  font-size: 0.8rem;
-
-  &__list {
-    border-top: 1px solid #C8C8C8;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__date {
-    width: 20%;
-    padding: 15px;
-    border-bottom: 1px solid #C8C8C8;
-  }
-
-  &__title {
-    border-bottom: 1px solid #C8C8C8;
-    width: 80%;
-    padding: 15px;
-  }
-}
-
-
-/*-------------------------------------------
 Menu
 -------------------------------------------*/
 .menu {
-  @extend .mb-lg;
+  @extend .mt-lg;
   position: relative;
 
   &::before {
@@ -519,16 +491,16 @@ Menu
   }
   
   &__inner {
+    @extend .pt-lg;
+    @extend .pb-lg;
     position: relative;
     z-index: 2;
+  }
 
-    & > .appear.up {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+  &__heading {
+    text-align: center;
 
-    .section-title {
+    & > .section-title {
       margin: 20px auto 0;
     }
   }
@@ -537,11 +509,11 @@ Menu
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 0;
-    padding: 20px 0 60px 0;
+    @extend .pt-md;
+    @extend .pb-md;
 
     @include mq(lg) {
-      padding: 30px 0 60px 0;
-      gap: 0 20px
+      gap: 0 20px;
     }
   }
 
@@ -570,12 +542,14 @@ Menu
 
   &__title, &__price {
     letter-spacing: 1.5px;
+    overflow: hidden;
     @extend .font-sm;
   }
 
   &__desc {
     margin-top: 20px;
     line-height: 1.5;
+    overflow: hidden;
     @extend .font-sm;
   }
 
@@ -592,6 +566,7 @@ Menu
 About
 -------------------------------------------*/
 .about {
+  @extend .mb-lg;
   
   &__inner {
     min-height: 100vh;
@@ -611,7 +586,7 @@ About
   }
 
   &__container {
-    max-width: 100%;
+    // max-width: 100%;
     overflow: hidden;
     position: relative;
     z-index: 2;
@@ -709,6 +684,99 @@ About
     font-size: 0.8em;
     line-height: 1.8;
     padding: 10px 1em;
+  }
+}
+
+
+/*-------------------------------------------
+News
+-------------------------------------------*/
+.news {
+  @extend .mt-lg;
+  position: relative;
+
+  &::before {
+    background: url("../../images/menu-bg.jpg") no-repeat center center / cover;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  &__inner {
+    @extend .pt-lg;
+    @extend .pb-lg;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__heading {
+    text-align: center;
+
+    & > .section-title {
+      margin: 20px auto 0;
+    }
+  }
+
+  &__ul {
+    @extend .pt-md;
+    @extend .pb-md;
+  }
+
+  &__li + &__li {
+    border-bottom: 0.5px solid #D3D6DD;
+  }
+
+  &__li {
+    padding: 10px 20px;
+    overflow: hidden;
+
+    &:first-child {
+      border-top: 0.5px solid #D3D6DD;
+      border-bottom: 0.5px solid #D3D6DD;
+    }
+
+    @include mq(lg) {
+      display: flex;
+      align-items: center;
+      padding: 20px 20px;
+    }
+  }
+
+  &__info {
+    @include mq(lg) {
+      flex: 0 1 280px;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    letter-spacing: 0.2em;
+    @extend .font-sm;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-top: 10px;
+    line-height: 1.8;
+    
+    @extend .font-sm;
+
+    @include mq(lg) {
+      margin-top: 0;
+      flex: 1 3 0px;
+    }
+  }
+
+  &__link {
+    @extend .mt-md;
+    text-align: center;
+
+    .btn {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -824,29 +892,6 @@ Footer
   // jQuery使用時はコメントアウトする
   .side-btn {
     display: none;
-  }
-
-
-  /*-------------------------------------------
-  News
-  -------------------------------------------*/
-  .news {
-    margin-bottom: 80px;
-
-    &__list {
-      flex-direction: column;
-    }
-
-    &__date {
-      width: 100%;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    &__title {
-      width: 100%;
-      padding-top: 0;
-    }
   }
 
 

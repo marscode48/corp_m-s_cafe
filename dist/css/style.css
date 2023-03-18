@@ -454,20 +454,95 @@
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .mainvisual, .feature, .menu {
+.mb-md {
+  margin-bottom: 30px !important;
+}
+@media screen and (min-width: 960px) {
+  .mb-md {
+    margin-bottom: 60px !important;
+  }
+}
+
+.mb-lg, .mainvisual, .feature, .about {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .mainvisual, .feature, .menu {
+  .mb-lg, .mainvisual, .feature, .about {
     margin-bottom: 150px !important;
   }
 }
 
-.font-sm, .feature__text, .menu__title, .menu__price, .menu__desc {
+.mt-sm {
+  margin-top: 16px !important;
+}
+
+.mt-md, .news__link {
+  margin-top: 30px !important;
+}
+@media screen and (min-width: 960px) {
+  .mt-md, .news__link {
+    margin-top: 60px !important;
+  }
+}
+
+.mt-lg, .menu, .news {
+  margin-top: 80px !important;
+}
+@media screen and (min-width: 960px) {
+  .mt-lg, .menu, .news {
+    margin-top: 150px !important;
+  }
+}
+
+.pt-sm {
+  padding-top: 16px !important;
+}
+
+.pt-md, .menu__grid, .news__ul {
+  padding-top: 30px !important;
+}
+@media screen and (min-width: 960px) {
+  .pt-md, .menu__grid, .news__ul {
+    padding-top: 60px !important;
+  }
+}
+
+.pt-lg, .menu__inner, .news__inner {
+  padding-top: 80px !important;
+}
+@media screen and (min-width: 960px) {
+  .pt-lg, .menu__inner, .news__inner {
+    padding-top: 150px !important;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-md, .menu__grid, .news__ul {
+  padding-bottom: 30px !important;
+}
+@media screen and (min-width: 960px) {
+  .pb-md, .menu__grid, .news__ul {
+    padding-bottom: 60px !important;
+  }
+}
+
+.pb-lg, .menu__inner, .news__inner {
+  padding-bottom: 80px !important;
+}
+@media screen and (min-width: 960px) {
+  .pb-lg, .menu__inner, .news__inner {
+    padding-bottom: 150px !important;
+  }
+}
+
+.font-sm, .feature__text, .menu__title, .menu__price, .menu__desc, .news__date, .news__title {
   font-size: 14px;
 }
 @media screen and (min-width: 960px) {
-  .font-sm, .feature__text, .menu__title, .menu__price, .menu__desc {
+  .font-sm, .feature__text, .menu__title, .menu__price, .menu__desc, .news__date, .news__title {
     font-size: 16px;
   }
 }
@@ -497,6 +572,19 @@
   .font-lg {
     font-size: 36px;
   }
+}
+
+.btn {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-weight: 300;
+}
+.btn.slide-bg::before {
+  background: #fff;
+}
+.btn.slide-bg:hover {
+  color: #050507;
 }
 
 /******************************************************************
@@ -551,14 +639,13 @@ li {
 
 .section-read {
   font-weight: 400;
-  margin: 40px auto 0;
   letter-spacing: 4px;
 }
 
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  max-width: 1070px;
+  max-width: 1620px;
 }
 
 .container {
@@ -867,30 +954,6 @@ Feature
 }
 
 /*-------------------------------------------
-News
--------------------------------------------*/
-.news {
-  margin-bottom: 140px;
-  font-size: 0.8rem;
-}
-.news__list {
-  border-top: 1px solid #C8C8C8;
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.news__date {
-  width: 20%;
-  padding: 15px;
-  border-bottom: 1px solid #C8C8C8;
-}
-.news__title {
-  border-bottom: 1px solid #C8C8C8;
-  width: 80%;
-  padding: 15px;
-}
-
-/*-------------------------------------------
 Menu
 -------------------------------------------*/
 .menu {
@@ -909,23 +972,19 @@ Menu
   position: relative;
   z-index: 2;
 }
-.menu__inner > .appear.up {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.menu__heading {
+  text-align: center;
 }
-.menu__inner .section-title {
+.menu__heading > .section-title {
   margin: 20px auto 0;
 }
 .menu__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px 0;
-  padding: 20px 0 60px 0;
 }
 @media screen and (min-width: 960px) {
   .menu__grid {
-    padding: 30px 0 60px 0;
     gap: 0 20px;
   }
 }
@@ -954,10 +1013,12 @@ Menu
 }
 .menu__title, .menu__price {
   letter-spacing: 1.5px;
+  overflow: hidden;
 }
 .menu__desc {
   margin-top: 20px;
   line-height: 1.5;
+  overflow: hidden;
 }
 .menu__btn {
   text-align: center;
@@ -985,7 +1046,6 @@ About
   background: #423012;
 }
 .about__container {
-  max-width: 100%;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -1082,6 +1142,76 @@ About
 }
 
 /*-------------------------------------------
+News
+-------------------------------------------*/
+.news {
+  position: relative;
+}
+.news::before {
+  background: url("../../images/menu-bg.jpg") no-repeat center center/cover;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.news__inner {
+  position: relative;
+  z-index: 2;
+}
+.news__heading {
+  text-align: center;
+}
+.news__heading > .section-title {
+  margin: 20px auto 0;
+}
+.news__li + .news__li {
+  border-bottom: 0.5px solid #D3D6DD;
+}
+.news__li {
+  padding: 10px 20px;
+  overflow: hidden;
+}
+.news__li:first-child {
+  border-top: 0.5px solid #D3D6DD;
+  border-bottom: 0.5px solid #D3D6DD;
+}
+@media screen and (min-width: 960px) {
+  .news__li {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .news__info {
+    flex: 0 1 280px;
+  }
+}
+.news__date {
+  display: inline-block;
+  letter-spacing: 0.2em;
+}
+.news__title {
+  display: inline-block;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+@media screen and (min-width: 960px) {
+  .news__title {
+    margin-top: 0;
+    flex: 1 3 0px;
+  }
+}
+.news__link {
+  text-align: center;
+}
+.news__link .btn {
+  margin: 0 auto;
+}
+
+/*-------------------------------------------
 Location
 -------------------------------------------*/
 .location {
@@ -1170,25 +1300,6 @@ Stylesheet: 900px以下のモニタで適用
 
 .side-btn {
   display: none;
-}
-
-/*-------------------------------------------
-News
--------------------------------------------*/
-.news {
-  margin-bottom: 80px;
-}
-.news__list {
-  flex-direction: column;
-}
-.news__date {
-  width: 100%;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.news__title {
-  width: 100%;
-  padding-top: 0;
 }
 
 /*-------------------------------------------

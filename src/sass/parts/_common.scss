@@ -1,7 +1,16 @@
 @use "../globals" as *;
 
+// マージン
 .mb-sm {
   margin-bottom: 16px !important;
+}
+
+.mb-md {
+  margin-bottom: 30px !important;
+
+  @include mq(lg) {
+    margin-bottom: 60px !important;
+  }
 }
 
 .mb-lg {
@@ -9,6 +18,67 @@
 
   @include mq(lg) {
     margin-bottom: 150px !important;
+  }
+}
+
+.mt-sm {
+  margin-top: 16px !important;
+}
+
+.mt-md {
+  margin-top: 30px !important;
+
+  @include mq(lg) {
+    margin-top: 60px !important;
+  }
+}
+
+.mt-lg {
+  margin-top: 80px !important;
+
+  @include mq(lg) {
+    margin-top: 150px !important;
+  }
+}
+
+// パディング
+.pt-sm {
+  padding-top: 16px !important;
+}
+
+.pt-md {
+  padding-top: 30px !important;
+
+  @include mq(lg) {
+    padding-top: 60px !important;
+  }
+}
+
+.pt-lg {
+  padding-top: 80px !important;
+
+  @include mq(lg) {
+    padding-top: 150px !important;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-md {
+  padding-bottom: 30px !important;
+
+  @include mq(lg) {
+    padding-bottom: 60px !important;
+  }
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+
+  @include mq(lg) {
+    padding-bottom: 150px !important;
   }
 }
 
@@ -40,5 +110,21 @@
 
   @include mq(lg) {
     font-size: 36px;
+  }
+}
+
+// btn
+.btn {
+  color: $cWhite;
+  background-color: transparent;
+  border: 1px solid $cWhite;
+  font-weight: 300;
+
+  &.slide-bg::before {
+    background: $cWhite;
+  }
+
+  &.slide-bg:hover {
+    color: $cBlack;
   }
 }
