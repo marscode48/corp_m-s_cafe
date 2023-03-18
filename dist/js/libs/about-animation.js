@@ -34,11 +34,11 @@ var AboutAnimation = /*#__PURE__*/function () {
           scrub: 0.5
         }
       }); // アニメーション
-      // x軸に移動(-カードの横幅 + 画面横幅 - padding+marginの余白調整)
+      // x軸に移動(-カードの横幅 + 画面横幅 - 余白調整)
 
       aboutTl.to(ul, {
         delay: 0.1,
-        x: -ul.clientWidth + innerWidth - 200,
+        x: -ul.clientWidth + innerWidth - 325,
         ease: 'none'
       });
     }
