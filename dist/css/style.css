@@ -1147,14 +1147,15 @@ News
 .news {
   position: relative;
 }
-.news::before {
-  background: url("../../images/menu-bg.jpg") no-repeat center center/cover;
-  content: "";
+.news__image {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  background: url("../../images/news-bg.jpg") no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .news__inner {
   position: relative;
@@ -1165,6 +1166,9 @@ News
 }
 .news__heading > .section-title {
   margin: 20px auto 0;
+}
+.news__ul {
+  overflow: hidden;
 }
 .news__li + .news__li {
   border-bottom: 0.5px solid #D3D6DD;

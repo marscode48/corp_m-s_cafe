@@ -41,6 +41,12 @@ class Main {
     }
   }
 
+  _newsAnimation(el, inview) {
+    if (inview) {
+      new NewsAnimation(el);
+    }
+  }
+
   _inviewAnimation(el, inview) {
     if (inview) {
       el.classList.add('inview');
@@ -74,6 +80,7 @@ class Main {
     new ScrollObserver('.gsap-top', this._mainVisualAnimation);
     new ScrollObserver('.gsap-feature', this._featureAnimation);
     new ScrollObserver('.gsap-about', this._aboutAnimation);
+    new ScrollObserver('.gsap-news', this._newsAnimation);
     new ScrollObserver('.menu__item', this._inviewAnimation);
     new ScrollObserver('.site-title', this._inviewAnimation);
     new ScrollObserver('.cover-slide', this._inviewAnimation);

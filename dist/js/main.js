@@ -61,6 +61,13 @@ var Main = /*#__PURE__*/function () {
       }
     }
   }, {
+    key: "_newsAnimation",
+    value: function _newsAnimation(el, inview) {
+      if (inview) {
+        new NewsAnimation(el);
+      }
+    }
+  }, {
     key: "_inviewAnimation",
     value: function _inviewAnimation(el, inview) {
       if (inview) {
@@ -99,6 +106,7 @@ var Main = /*#__PURE__*/function () {
       new ScrollObserver('.gsap-top', this._mainVisualAnimation);
       new ScrollObserver('.gsap-feature', this._featureAnimation);
       new ScrollObserver('.gsap-about', this._aboutAnimation);
+      new ScrollObserver('.gsap-news', this._newsAnimation);
       new ScrollObserver('.menu__item', this._inviewAnimation);
       new ScrollObserver('.site-title', this._inviewAnimation);
       new ScrollObserver('.cover-slide', this._inviewAnimation);

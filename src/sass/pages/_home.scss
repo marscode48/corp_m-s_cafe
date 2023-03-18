@@ -695,14 +695,14 @@ News
   @extend .mt-lg;
   position: relative;
 
-  &::before {
-    background: url("../../images/menu-bg.jpg") no-repeat center center / cover;
-    content: "";
+  &__image {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    background: url("../../images/news-bg.jpg") no-repeat;
+    object-fit: cover;
   }
   
   &__inner {
@@ -723,6 +723,7 @@ News
   &__ul {
     @extend .pt-md;
     @extend .pb-md;
+    overflow: hidden;
   }
 
   &__li + &__li {
