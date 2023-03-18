@@ -8,7 +8,6 @@ class FeatureAnimation {
   animate() {
     // 要素取得
     const img = this.DOM.el.querySelector('.feature__figure img');
-    const title = this.DOM.el.querySelector('.feature__title');
     const text = this.DOM.el.querySelector('.feature__text');
 
     // フィーチャータイムライン
@@ -22,17 +21,6 @@ class FeatureAnimation {
     });
 
     // アニメーション
-    featureTl.fromTo(
-      title,
-      {
-        y: 75,
-      },
-      {
-        y: 0,
-        ease: 'none',
-        duration: 1,
-      },
-    );
     featureTl.fromTo(
       text,
       {

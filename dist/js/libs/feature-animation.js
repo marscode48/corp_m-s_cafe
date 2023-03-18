@@ -20,7 +20,6 @@ var FeatureAnimation = /*#__PURE__*/function () {
     value: function animate() {
       // 要素取得
       var img = this.DOM.el.querySelector('.feature__figure img');
-      var title = this.DOM.el.querySelector('.feature__title');
       var text = this.DOM.el.querySelector('.feature__text'); // フィーチャータイムライン
 
       var featureTl = gsap.timeline({
@@ -32,13 +31,6 @@ var FeatureAnimation = /*#__PURE__*/function () {
         }
       }); // アニメーション
 
-      featureTl.fromTo(title, {
-        y: 75
-      }, {
-        y: 0,
-        ease: 'none',
-        duration: 1
-      });
       featureTl.fromTo(text, {
         y: 75,
         autoAlpha: 0
