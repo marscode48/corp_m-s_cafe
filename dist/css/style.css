@@ -450,6 +450,76 @@
     transform: translateY(0);
   }
 }
+/* ギャラリーループスライダー */
+.gallery .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.gallery .swiper-slide {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.gallery .slide {
+  width: 150px;
+  transition: 0.6s all ease-out;
+}
+@media screen and (min-width: 960px) {
+  .gallery .slide {
+    width: 200px;
+  }
+}
+.gallery .slide:hover {
+  width: 225px;
+}
+@media screen and (min-width: 960px) {
+  .gallery .slide:hover:hover {
+    width: 300px;
+  }
+}
+.gallery .slide:hover .slide-content {
+  opacity: 1;
+}
+.gallery .slide-media {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+@media screen and (min-width: 960px) {
+  .gallery .slide-media {
+    height: 250px;
+  }
+}
+.gallery .slide-media > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery .slide-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 16px 10px;
+  transition: 0.6s all ease-out;
+  opacity: 0;
+  color: #fff;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(90, 20, 20, 0.5) 50%);
+}
+.gallery .slide-title {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+}
+.gallery .slide-desc {
+  margin-top: 5px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
 .mb-sm {
   margin-bottom: 16px !important;
 }
@@ -485,11 +555,11 @@
   }
 }
 
-.mt-lg, .menu, .news {
+.mt-lg, .menu, .news, .gallery {
   margin-top: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mt-lg, .menu, .news {
+  .mt-lg, .menu, .news, .gallery {
     margin-top: 150px !important;
   }
 }
@@ -520,11 +590,11 @@
   padding-bottom: 16px !important;
 }
 
-.pb-md, .menu__grid, .news__ul {
+.pb-md, .menu__grid, .news__ul, .gallery__inner {
   padding-bottom: 30px !important;
 }
 @media screen and (min-width: 960px) {
-  .pb-md, .menu__grid, .news__ul {
+  .pb-md, .menu__grid, .news__ul, .gallery__inner {
     padding-bottom: 60px !important;
   }
 }
@@ -1213,6 +1283,20 @@ News
 }
 .news__link .btn {
   margin: 0 auto;
+}
+
+/*-------------------------------------------
+Gallery
+-------------------------------------------*/
+.gallery__inner {
+  position: relative;
+  z-index: 2;
+}
+.gallery__heading {
+  text-align: center;
+}
+.gallery__heading > .section-title {
+  margin: 20px auto 0;
 }
 
 /*-------------------------------------------

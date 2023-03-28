@@ -783,6 +783,28 @@ News
 
 
 /*-------------------------------------------
+Gallery
+-------------------------------------------*/
+.gallery {
+  @extend .mt-lg;
+
+  &__inner {
+    @extend .pb-md;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__heading {
+    text-align: center;
+
+    & > .section-title {
+      margin: 20px auto 0;
+    }
+  }
+}
+
+
+/*-------------------------------------------
 Location
 -------------------------------------------*/
 .location {
