@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     top: 0,
     behavior: 'smooth'
   });
+  gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
   var main = new Main();
 });
@@ -28,10 +29,10 @@ var Main = /*#__PURE__*/function () {
   _createClass(Main, [{
     key: "_init",
     value: function _init() {
-      gsap.registerPlugin(ScrollTrigger);
       new MenuOpen();
       new MenuFadeIn(520);
       new SmoothScroll(80);
+      new GallerySlider('.swiper-gallery-top', '.swiper-gallery-bottom');
       Pace.on('done', this._paceDone.bind(this));
     }
   }, {

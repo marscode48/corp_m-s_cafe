@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   window.scroll({ top: 0, behavior: 'smooth' });
+  gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.refresh();
   const main = new Main();
 });
@@ -12,10 +13,10 @@ class Main {
   }
 
   _init() {
-    gsap.registerPlugin(ScrollTrigger);
     new MenuOpen();
     new MenuFadeIn(520);
     new SmoothScroll(80);
+    new GallerySlider('.swiper-gallery-top', '.swiper-gallery-bottom');
     Pace.on('done', this._paceDone.bind(this));
   }
 
