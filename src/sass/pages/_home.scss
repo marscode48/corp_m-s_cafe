@@ -805,41 +805,6 @@ Gallery
 
 
 /*-------------------------------------------
-Location
--------------------------------------------*/
-.location {
-  margin-bottom: 480px;
-  position: relative;
-  z-index: 20;
-
-  &__name {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
-
-  &__address, &__open, &__contact {
-    margin-bottom: 20px;
-  }
-
-  & .btn {
-    color: $cWhite;
-    background-color: transparent;
-    border: 1px solid $cWhite;
-    font-weight: 300;
-
-    &.slide-bg::before {
-      background: $cWhite;
-    }
-
-    &.slide-bg:hover {
-      color: $cBlack;
-    }
-  }
-}
-
-
-/*-------------------------------------------
 Footer
 -------------------------------------------*/
 .footer {

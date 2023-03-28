@@ -1300,35 +1300,6 @@ Gallery
 }
 
 /*-------------------------------------------
-Location
--------------------------------------------*/
-.location {
-  margin-bottom: 480px;
-  position: relative;
-  z-index: 20;
-}
-.location__name {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-.location__address, .location__open, .location__contact {
-  margin-bottom: 20px;
-}
-.location .btn {
-  color: #fff;
-  background-color: transparent;
-  border: 1px solid #fff;
-  font-weight: 300;
-}
-.location .btn.slide-bg::before {
-  background: #fff;
-}
-.location .btn.slide-bg:hover {
-  color: #050507;
-}
-
-/*-------------------------------------------
 Footer
 -------------------------------------------*/
 .footer {
