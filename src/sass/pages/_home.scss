@@ -901,7 +901,7 @@ Footer
     display: inline-block;
 
     & img {
-      width: 150px;
+      width: 200px;
 
       @include mq(lg) {
         width: 250px;
