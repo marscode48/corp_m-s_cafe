@@ -137,26 +137,6 @@ li {
 }
 
 
-/* Locationの背景画像 */
-.bg {
-  background: url("../images/bg.jpg") center center repeat !important;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s;
-
-  &.inview {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-
 /*-------------------------------------------
 ヘッダー
 -------------------------------------------*/
@@ -1002,14 +982,6 @@ Footer
   //     }
   //   }
   // }
-
-
-  /*-------------------------------------------
-  Location
-  -------------------------------------------*/
-  .location {
-    margin-bottom: 280px;
-  }
 
 
   /*-------------------------------------------
