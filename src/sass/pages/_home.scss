@@ -879,6 +879,22 @@ Footer
       padding: 0;
       width: 40%;
     }
+
+    p {
+      line-height: 1.6;
+
+      &:first-of-type {
+        margin-top: 15px;
+  
+        @include mq(lg) {
+          margin-top: 30px
+        }
+      }
+    }
+
+    p + p {
+      margin-top: 10px;
+    }
   }
 
   &__logo {
@@ -893,14 +909,14 @@ Footer
     }
   }
 
-  &__address {
-    margin-top: 15px;
-    line-height: 1.6;
+  // &__address {
+  //   margin-top: 15px;
+  //   line-height: 1.6;
 
-    @include mq(lg) {
-      margin-top: 30px
-    }
-  }
+  //   @include mq(lg) {
+  //     margin-top: 30px
+  //   }
+  // }
 
   &__sns {
     margin-top: 15px;

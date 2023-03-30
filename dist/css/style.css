@@ -1364,6 +1364,20 @@ Footer
     width: 40%;
   }
 }
+.footer__info p {
+  line-height: 1.6;
+}
+.footer__info p:first-of-type {
+  margin-top: 15px;
+}
+@media screen and (min-width: 960px) {
+  .footer__info p:first-of-type {
+    margin-top: 30px;
+  }
+}
+.footer__info p + p {
+  margin-top: 10px;
+}
 .footer__logo {
   display: inline-block;
 }
@@ -1373,15 +1387,6 @@ Footer
 @media screen and (min-width: 960px) {
   .footer__logo img {
     width: 250px;
-  }
-}
-.footer__address {
-  margin-top: 15px;
-  line-height: 1.6;
-}
-@media screen and (min-width: 960px) {
-  .footer__address {
-    margin-top: 30px;
   }
 }
 .footer__sns {
