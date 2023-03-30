@@ -546,20 +546,20 @@
   margin-top: 16px !important;
 }
 
-.mt-md, .news__link {
+.mt-md, .news__link, .footer__copyright {
   margin-top: 30px !important;
 }
 @media screen and (min-width: 960px) {
-  .mt-md, .news__link {
+  .mt-md, .news__link, .footer__copyright {
     margin-top: 60px !important;
   }
 }
 
-.mt-lg, .menu, .news, .gallery {
+.mt-lg, .menu, .news, .gallery, .footer {
   margin-top: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mt-lg, .menu, .news, .gallery {
+  .mt-lg, .menu, .news, .gallery, .footer {
     margin-top: 150px !important;
   }
 }
@@ -577,11 +577,11 @@
   }
 }
 
-.pt-lg, .menu__inner, .news__inner {
+.pt-lg, .menu__inner, .news__inner, .footer__wrapper {
   padding-top: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .pt-lg, .menu__inner, .news__inner {
+  .pt-lg, .menu__inner, .news__inner, .footer__wrapper {
     padding-top: 150px !important;
   }
 }
@@ -599,11 +599,11 @@
   }
 }
 
-.pb-lg, .menu__inner, .news__inner {
+.pb-lg, .menu__inner, .news__inner, .footer__wrapper {
   padding-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .pb-lg, .menu__inner, .news__inner {
+  .pb-lg, .menu__inner, .news__inner, .footer__wrapper {
     padding-bottom: 150px !important;
   }
 }
@@ -758,16 +758,15 @@ li {
   position: relative;
 }
 .icon::before {
-  display: block;
   content: "";
   position: absolute;
   top: 50%;
-  left: 14%;
+  left: 0;
   width: 1em;
   height: 1em;
   transform: translateY(-50%);
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: none;
   background-size: contain;
 }
 .icon.twitter::before {
@@ -1303,48 +1302,104 @@ Gallery
 Footer
 -------------------------------------------*/
 .footer {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  border-top: solid 1px #fff;
+  position: relative;
   font-size: 0.75rem;
-  padding: 80px 5%;
-  text-align: left;
+}
+.footer::before {
+  background: url("../../images/footer-bg.jpg") no-repeat center center/cover;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: grayscale(50%) brightness(0.8);
+}
+.footer__wrapper {
+  position: relative;
+  z-index: 2;
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (min-width: 960px) {
+  .footer__inner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+.footer__map {
+  filter: grayscale(100%);
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 75%; /* 比率 (3÷4)×100 */
+}
+@media screen and (min-width: 960px) {
+  .footer__map-wrap {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .footer__map {
+    padding-top: 56.25%; /* 比率 (9÷16)×100 */
+  }
+}
+.footer__map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer__info {
+  padding: 25px 0;
+  width: 100%;
+}
+@media screen and (min-width: 960px) {
+  .footer__info {
+    padding: 0;
+    width: 40%;
+  }
 }
 .footer__logo {
-  margin-bottom: 15px;
+  display: inline-block;
 }
-.footer__logo a {
-  display: block;
-}
-.footer__logo a img {
+.footer__logo img {
   width: 150px;
 }
 @media screen and (min-width: 960px) {
-  .footer__logo a img {
-    width: 200px;
+  .footer__logo img {
+    width: 250px;
   }
 }
-.footer__ask p {
+.footer__address {
+  margin-top: 15px;
   line-height: 1.6;
 }
+@media screen and (min-width: 960px) {
+  .footer__address {
+    margin-top: 30px;
+  }
+}
 .footer__sns {
+  margin-top: 15px;
   display: flex;
   align-items: center;
-  margin-top: 30px;
 }
-.footer__sns li a {
-  padding: 0 15px;
+@media screen and (min-width: 960px) {
+  .footer__sns {
+    margin-top: 30px;
+  }
 }
-.footer__sns .icon::before {
-  left: 0;
+.footer__sns li > a {
+  padding: 0 1.25em;
+  letter-spacing: 0.1em;
 }
 .footer__copyright {
-  display: flex;
-  align-items: center;
-}
-.footer__copyright li:last-child {
-  margin-left: 15px;
+  text-align: center;
 }
 
 /******************************************************************
@@ -1377,12 +1432,4 @@ Feature
 /*-------------------------------------------
 Footer
 -------------------------------------------*/
-.footer {
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 60px 5%;
-}
-.footer__sns {
-  margin-bottom: 30px;
-}
 /*# sourceMappingURL=style.css.map */
