@@ -233,15 +233,6 @@ Feature
         margin-top: 180px;
       }
     }
-
-    .section-title {
-      font-size: 1.2rem;
-      letter-spacing: 0.15rem;
-  
-      @include mq(lg) {
-        font-size: 1.4rem;
-      }
-    }
   }
 
   &__area {
@@ -309,7 +300,7 @@ Feature
   &__text {
     margin-top: 20px;
     line-height: 1.8;
-    @extend .font-sm;
+    @extend .font-md;
 
     p + p {
       margin-top: 10px;
@@ -344,10 +335,6 @@ Menu
 
   &__heading {
     text-align: center;
-
-    & > .section-title {
-      margin: 20px auto 0;
-    }
   }
   
   &__grid {
@@ -388,7 +375,7 @@ Menu
   &__title, &__price {
     letter-spacing: 1.5px;
     overflow: hidden;
-    @extend .font-sm;
+    @extend .font-md;
   }
 
   &__desc {
@@ -435,13 +422,10 @@ About
     overflow: hidden;
     position: relative;
     z-index: 2;
-
-    & .section-title {
-      margin: 0 0 30px 0;
-    }
   }  
 
   &__ul {
+    @extend .mt-md;
     display: inline-flex;
     gap: 50px;
 
@@ -467,13 +451,13 @@ About
       position: absolute;
       top: 10px;
       right: 5%;
-      font-size: 1.5em;
+      font-size: 2.4rem;
       color: $cWhite;
-      font-weight: bold;
+      font-weight: 700;
       z-index: 2;
 
       @include mq(lg) {
-        font-size: 2em;    
+        font-size: 3.4rem;    
       }
     }
 
@@ -515,18 +499,19 @@ About
 
   &__read {
     margin-top: 10px;
-    font-size: 0.6em;
+    font-size: 1rem;
     letter-spacing: 0.5em;
   }
 
   &__title {
-    font-weight: bold;
+    font-weight: 700;
     @extend .font-md;
     margin-top: 10px;
+    letter-spacing: 0.2rem;
   }
 
   &__text {
-    font-size: 0.8em;
+    @extend .font-sm;
     line-height: 1.8;
     padding: 10px 1em;
   }
@@ -559,10 +544,6 @@ News
 
   &__heading {
     text-align: center;
-
-    & > .section-title {
-      margin: 20px auto 0;
-    }
   }
 
   &__ul {
@@ -651,10 +632,6 @@ Gallery
 
   &__heading {
     text-align: center;
-
-    & > .section-title {
-      margin: 20px auto 0;
-    }
   }
 }
 
@@ -665,7 +642,7 @@ Footer
 .footer {
   position: relative;
   @extend .mt-lg;
-  font-size: 0.75rem;
+  @extend .font-md;
   // border-top: solid 1px $cWhite;
 
   &::before {

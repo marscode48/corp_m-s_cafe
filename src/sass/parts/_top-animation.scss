@@ -13,7 +13,7 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    font-size: 120px;
+    font-size: 12rem;
     color: #fff;
     font-family: "EB Garamond", serif;
     z-index: 10;
@@ -64,7 +64,7 @@
     width: 50px;
 
     & > span {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: $cWhite;
       position: absolute;
       left:25px;
