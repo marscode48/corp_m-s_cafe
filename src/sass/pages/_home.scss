@@ -1,141 +1,6 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-/******************************************************************
-
-Stylesheet: ベーススタイル
-
-******************************************************************/
-
-html {
-  font-size: 100%;
-}
-body {
-  color: $cBlack;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-}
-a {
-  color: $cWhite;
-  text-decoration: none;
-}
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-li {
-  list-style: none;
-}
-
-/* 共通クラス */
-.site-title {
-  font-size: 6.25rem;
-  font-weight: 300;
-  letter-spacing: 0.03em;
-  margin: 100px 0;
-  opacity: 0;
-  transform: translateY(50%);
-  transition: transform 1s;
-
-  &.inview {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-
-}
-.section-title {
-  border-bottom: solid 1px $cWhite;
-  display: inline-block;
-  @extend .font-lr;
-  font-weight: 700;
-  // margin: 0 auto;
-}
-.section-read {
-  font-weight: 400;
-  @extend .font-lr;
-  // margin: 40px auto 0;
-  letter-spacing: 4px;
-}
-.wrapper {
-  // max-width: 800px;
-  // padding: 0 30px;
-  // margin: 0 auto;
-  width: 90%;
-  margin: 0 auto;
-  max-width: $contentMaxWidth;
-}
-.container {
-  background: $cBlack;
-  color: $cWhite;
-  // text-align: center;
-}
-
-
-/* サイドボタン */
-.side-btn {
-  border: solid 1px $cWhite;
-  position: fixed;
-  right: -200px;
-  bottom: 250px;
-  transform: rotate(-90deg) translateY(60px);
-  transition: transform 0.6s;
-  z-index: 30;
-  
-  & a {
-    width: 140px;
-    font-size: 0.875rem;
-    display: inline-block;
-    letter-spacing: 0.1em;
-    text-align: start;
-    padding: 10px 0 10px 40px;
-    transition: opacity 0.3s;
-    border-left: solid 1px $cWhite;
-    
-    &:first-of-type {
-      border-left: none;
-    }
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
-  &.inview {
-    transform: rotate(-90deg) translateY(0px);
-  }
-}
-
-
-/* アイコン */
-.icon {
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    transform: translateY(-50%);
-    background-position: center;
-    background-repeat: none;
-    background-size: contain;
-  }
-
-  &.twitter::before {
-    background-image: url(../images/twitter.svg);
-  }
-
-  &.facebook::before {
-    background-image: url(../images/facebook.svg);
-  }
-
-  &.instagram::before {
-    background-image: url(../images/instagram.svg);
-  }
-}
-
 
 /*-------------------------------------------
 ヘッダー
@@ -755,8 +620,18 @@ News
     @extend .mt-md;
     text-align: center;
 
-    .btn {
-      margin: 0 auto;
+    & .btn {
+      color: $cWhite;
+      background-color: transparent;
+      border: 1px solid $cWhite;
+
+      &::before {
+        background: $cWhite;
+      }
+
+      &:hover {
+        color: $cBlack;
+      }
     }
   }
 }

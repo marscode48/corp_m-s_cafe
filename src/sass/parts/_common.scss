@@ -1,26 +1,59 @@
 @use "../globals" as *;
-
-// マージン
-.mb-sm {
-  margin-bottom: 16px !important;
+/* 共通クラス */
+html {
+  font-size: 100%;
 }
 
-.mb-md {
-  margin-bottom: 30px !important;
+body {
+  @extend .font-md;
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
-  @include mq(lg) {
-    margin-bottom: 60px !important;
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  color: $cWhite;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* アイコン */
+.icon {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+  }
+
+  &.twitter::before {
+    background-image: url(../images/twitter.svg);
+  }
+
+  &.facebook::before {
+    background-image: url(../images/facebook.svg);
+  }
+
+  &.instagram::before {
+    background-image: url(../images/instagram.svg);
   }
 }
 
-.mb-lg {
-  margin-bottom: 80px !important;
-
-  @include mq(lg) {
-    margin-bottom: 150px !important;
-  }
-}
-
+/* マージン */
 .mt-sm {
   margin-top: 16px !important;
 }
@@ -38,6 +71,26 @@
 
   @include mq(lg) {
     margin-top: 150px !important;
+  }
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-md {
+  margin-bottom: 30px !important;
+
+  @include mq(lg) {
+    margin-bottom: 60px !important;
+  }
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+
+  @include mq(lg) {
+    margin-bottom: 150px !important;
   }
 }
 
@@ -82,49 +135,42 @@
   }
 }
 
-
-// font
+/* フォント */
 .font-sm {
-  font-size: 14px;
-
-  @include mq(lg) {
-    font-size: 16px;
-  }
+  font-size: 0.75rem;
 }
+
 .font-md {
-  font-size: 17px;
-
-  @include mq(lg) {
-    font-size: 19px;
-  }
+font-size: 0.875rem;
 }
+
 .font-lr {
-  font-size: 17px;
-
-  @include mq(lg) {
-    font-size: 23px;
-  }
+  font-size: 1.125rem;
 }
+
 .font-lg {
-  font-size: 25px;
-
-  @include mq(lg) {
-    font-size: 36px;
-  }
+  font-size: 1.5rem;
 }
 
-// btn
-.btn {
+.container {
+  background: $cBlack;
   color: $cWhite;
-  background-color: transparent;
-  border: 1px solid $cWhite;
-  font-weight: 300;
+}
 
-  &.slide-bg::before {
-    background: $cWhite;
-  }
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
 
-  &.slide-bg:hover {
-    color: $cBlack;
-  }
+.section-title {
+  border-bottom: solid 1px $cWhite;
+  display: inline-block;
+  @extend .font-lr;
+  font-weight: 700;
+}
+.section-read {
+  font-weight: 400;
+  @extend .font-lr;
+  letter-spacing: 4px;
 }
