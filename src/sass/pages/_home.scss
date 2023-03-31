@@ -137,81 +137,9 @@
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
-
-
 .mainvisual {
-  @extend .mb-lg;
-  
-  // &__inner {
-  //   display: flex;
-  //   justify-content: center;
-  //   overflow-x: hidden;
-  // }
-
-  // &__img {
-  //   width: calc(100% / 3);
-  //   height: 100vh;
-  //   flex-shrink: 0;
-  //   object-fit: cover;
-  // }
-
-//   &__footer {
-//     position: absolute;
-//     left: 50%;
-//     bottom: 60px;
-//     transform: translateX(-50%);
-//     z-index: 1;
-//     height: 150px;
-//     width: 40px;
-//     overflow: hidden;
-//   }
-
-//   &__downarrow {
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     width: 15px;
-//     @include animation(
-//       $name: kf-arrow-anime,
-//       $iteration-count: infinite,
-//       $duration: 2s,
-//       $timing-function: linear
-//     );
-//   }
-
-//   &__scrolltext {
-//     position: absolute;
-//     transform: rotate(90deg);
-//     left: -8px;
-//     top: 15px;
-//     font-size: 1.75rem;
-//     opacity: 0.7;
-//   }
-
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     z-index: 2;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     box-shadow: inset 0 0 100px $cBlack;
-//   }
-// }
-
-// @keyframes kf-arrow-anime {
-//   0%,
-//   50%,
-//   100% {
-//     transform: translateY(-10%);
-//   }
-//   30% {
-//     transform: none;
-//   }
+  @extend .mb-lg;  
 }
-
-
 
 
 /*-------------------------------------------
@@ -418,7 +346,6 @@ About
   }
 
   &__container {
-    // max-width: 100%;
     overflow: hidden;
     position: relative;
     z-index: 2;
@@ -587,10 +514,8 @@ News
   &__title {
     display: inline-block;
     margin-top: 10px;
-    line-height: 1.8;
-    
     @extend .font-sm;
-
+    line-height: 1.8;
     @include mq(lg) {
       margin-top: 0;
       flex: 1 3 0px;
@@ -643,7 +568,6 @@ Footer
   position: relative;
   @extend .mt-lg;
   @extend .font-md;
-  // border-top: solid 1px $cWhite;
 
   &::before {
     background: url("../../images/footer-bg.jpg") no-repeat center center / cover;
@@ -656,7 +580,6 @@ Footer
     filter: grayscale(50%) brightness(0.8);
   }
 
-
   &__wrapper {
     @extend .pt-lg;
     @extend .pb-lg;
@@ -668,7 +591,6 @@ Footer
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    // justify-content: center;
 
     @include mq(lg) {
       flex-direction: row-reverse;
@@ -741,15 +663,6 @@ Footer
     }
   }
 
-  // &__address {
-  //   margin-top: 15px;
-  //   line-height: 1.6;
-
-  //   @include mq(lg) {
-  //     margin-top: 30px
-  //   }
-  // }
-
   &__sns {
     margin-top: 15px;
     display: flex;
@@ -770,106 +683,3 @@ Footer
     text-align: center;
   }
 }
-
-  /******************************************************************
-
-  Stylesheet: 900px以下のモニタで適用
-
-  ******************************************************************/
-
-  .site-title {
-    font-size: 3rem;
-    margin: 50px 0;
-  }
-  // .section-title {
-  //   font-size: 2rem;
-  // }
-  // jQuery使用時はコメントアウトする
-  .side-btn {
-    display: none;
-  }
-
-
-  /*-------------------------------------------
-  Menu
-  -------------------------------------------*/
-  // .menu {
-  //   margin-bottom: 280px;
-    
-  //   &__inner {
-  //     padding: 15px;
-  //   }
-
-  //   &__flex {
-  //     flex-direction: column;
-
-  //     &:nth-child(even) {
-  //       flex-direction: column;
-
-  //       & .menu__texts-inner {
-  //         text-align: center;
-  //       }
-  //     }
-  //   }
-
-  //   &__img {
-  //     flex-basis: auto;
-  //   }
-
-  //   &__texts {
-  //     flex-basis: auto;
-  //   }
-
-  //   &__texts-inner {
-  //     width: 100%;
-  //     margin: 0 auto;
-  //     text-align: center;
-  //     padding-top: 30px;
-  //     padding-bottom: 30px;
-  //   }
-
-  //   &__title {
-  //     &::before {
-  //       display: none;
-  //     }
-  //   }
-  // }
-
-
-  /*-------------------------------------------
-  Feature
-  -------------------------------------------*/
-  // .feature {
-
-  //   &__inner {
-  //     flex-direction: column;
-  //   }
-
-  //   &__img {
-  //     width: 100%;
-  //     margin-bottom: 30px;
-
-  //     & img {
-  //       height: 300px;
-  //     }
-  //   }
-
-  //   &__text {
-  //     width: 100%;
-  //     padding: 0 3%;
-  //   }
-  // }
-
-
-  /*-------------------------------------------
-  Footer
-  -------------------------------------------*/
-  // .footer {
-  //   flex-direction: column;
-  //   align-items: flex-start;
-  //   padding: 60px 5%;
-
-  //   &__sns {
-  //     margin-bottom: 30px;
-  //   }
-  // }
