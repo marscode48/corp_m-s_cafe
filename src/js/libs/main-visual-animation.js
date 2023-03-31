@@ -20,14 +20,14 @@ class MainVisualAnimation {
   animate() {
     // 要素取得
     const img = document.querySelector('.gsap-top-image');
-    const bgLeft = document.querySelector('.gsap-top-bg__left');
-    const bgRight = document.querySelector('.gsap-top-bg__right');
+    const bgLeft = document.querySelector('.gsap-top-bg-left');
+    const bgRight = document.querySelector('.gsap-top-bg-right');
     const logo = document.querySelector('.gsap-top-logo');
     const hamburger = document.querySelector('.gsap-top-hamburger');
     const scroll = document.querySelector('.gsap-top-scroll');
     const title = document.querySelector('.gsap-top-title');
-    const titleLeft = document.querySelector('.gsap-top-title__left');
-    const titleRight = document.querySelector('.gsap-top-title__right');
+    const titleLeft = document.querySelector('.gsap-top-title-left');
+    const titleRight = document.querySelector('.gsap-top-title-right');
 
     // トップタイムライン
     const topTl = gsap.timeline();

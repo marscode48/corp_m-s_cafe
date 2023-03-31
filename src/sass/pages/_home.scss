@@ -138,7 +138,88 @@
 Mainvisual
 -------------------------------------------*/
 .mainvisual {
-  @extend .mb-lg;  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  &__title {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    font-size: 12rem;
+    color: #fff;
+    font-family: "EB Garamond", serif;
+    z-index: 10;
+
+    &-left, &-right {
+      display: inline-block;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__bg-left, &__bg-right {
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    width: 50%;
+    height: 100%;
+  }
+
+  &__bg-left {
+    background: url("../../images/mainvisual1.jpg") no-repeat center center / cover;
+    left: 0;
+    z-index: -10;
+  }
+
+  &__bg-right {
+    background: url("../../images/mainvisual3.jpg") no-repeat center / cover;
+    right: 0;
+    z-index: -10;
+  }
+  
+  &__scroll {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    height: 200px;
+    width: 50px;
+
+    & > span {
+      font-size: 1.4rem;
+      color: $cWhite;
+      position: absolute;
+      left:25px;
+      bottom:10px;
+      letter-spacing: 0.1rem;
+      writing-mode: vertical-rl;
+
+      &::after {
+        content:"";
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:2px;
+        height: 150px;
+        background:$cWhite;
+      }
+    }
+  }
 }
 
 

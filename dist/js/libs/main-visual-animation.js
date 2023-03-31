@@ -43,14 +43,14 @@ var MainVisualAnimation = /*#__PURE__*/function () {
     value: function animate() {
       // 要素取得
       var img = document.querySelector('.gsap-top-image');
-      var bgLeft = document.querySelector('.gsap-top-bg__left');
-      var bgRight = document.querySelector('.gsap-top-bg__right');
+      var bgLeft = document.querySelector('.gsap-top-bg-left');
+      var bgRight = document.querySelector('.gsap-top-bg-right');
       var logo = document.querySelector('.gsap-top-logo');
       var hamburger = document.querySelector('.gsap-top-hamburger');
       var scroll = document.querySelector('.gsap-top-scroll');
       var title = document.querySelector('.gsap-top-title');
-      var titleLeft = document.querySelector('.gsap-top-title__left');
-      var titleRight = document.querySelector('.gsap-top-title__right'); // トップタイムライン
+      var titleLeft = document.querySelector('.gsap-top-title-left');
+      var titleRight = document.querySelector('.gsap-top-title-right'); // トップタイムライン
 
       var topTl = gsap.timeline(); // スクロールタイムライン
 
