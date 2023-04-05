@@ -537,13 +537,18 @@ News
     left: 0;
     height: 100%;
     width: 100%;
-    background: url("../../images/news-bg.jpg") no-repeat;
-    object-fit: cover;
+    background: url("../../images/sp-news-bg.jpg") no-repeat;
+    background-size: auto auto !important;
+    filter: grayscale(75%) brightness(0.5);
+
+    @include mq(lg) {
+      background: url("../../images/news-bg.jpg") no-repeat;
+    }
   }
   
   &__inner {
-    @extend .pt-lg;
-    @extend .pb-lg;
+    @extend .pt-md;
+    @extend .pb-md;
     position: relative;
     z-index: 2;
   }
@@ -555,11 +560,8 @@ News
   &__ul {
     @extend .pt-md;
     @extend .pb-md;
+    @extend .font-sm;
     overflow: hidden;
-  }
-
-  &__li + &__li {
-    border-bottom: 0.5px solid #D3D6DD;
   }
 
   &__li {
@@ -567,14 +569,19 @@ News
     overflow: hidden;
 
     &:first-child {
-      border-top: 0.5px solid #D3D6DD;
-      border-bottom: 0.5px solid #D3D6DD;
+      border-top: 0.5px dotted $cWhite;
+      border-bottom: 0.5px dotted $cWhite;
+    }
+
+    & + & {
+      border-bottom: 0.5px dotted $cWhite;
     }
 
     @include mq(lg) {
       display: flex;
       align-items: center;
       padding: 20px 20px;
+      @include link-hovers();
     }
   }
 
@@ -586,14 +593,12 @@ News
 
   &__date {
     display: inline-block;
-    letter-spacing: 0.2em;
-    @extend .font-sm;
+    letter-spacing: 0.28rem;
   }
 
   &__title {
     display: inline-block;
     margin-top: 10px;
-    @extend .font-sm;
     line-height: 1.8;
     @include mq(lg) {
       margin-top: 0;
@@ -602,13 +607,15 @@ News
   }
 
   &__link {
-    @extend .mt-md;
     text-align: center;
 
     & .btn {
       color: $cWhite;
       background-color: transparent;
       border: 1px solid $cWhite;
+      margin: 0 auto;
+      font-weight: 400;
+      @extend .font-md;
 
       &::before {
         background: $cWhite;
