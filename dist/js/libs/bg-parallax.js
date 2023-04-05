@@ -29,7 +29,7 @@ var BgParallax = /*#__PURE__*/function () {
           start: 'top+=100 bottom',
           end: 'bottom top',
           scrub: 1,
-          markers: true
+          markers: false
         }
       }); // アニメーション
       // 背景画像をY座標（Windowの高さ÷4）上に移動

@@ -17,7 +17,7 @@ class BgParallax {
         start: 'top+=100 bottom',
         end: 'bottom top',
         scrub: 1,
-        markers: true,
+        markers: false,
       },
     });
 
