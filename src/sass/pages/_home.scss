@@ -330,7 +330,6 @@ Menu
 
     @include mq(lg) {
       background: url("../../images/menu-bg.jpg") no-repeat;
-
     }
   }
   
@@ -451,7 +450,7 @@ About
     text-align: center;
     align-items: center;
     counter-increment: num 1;
-    background-color: #4e4e4e;
+    background-color: $cBgGray;
     border: 1px solid $cWhite;
     box-shadow: rgba(255 255 255 / 0.3) 0px 7px 29px 0px;
     
@@ -460,14 +459,10 @@ About
       position: absolute;
       top: 10px;
       right: 5%;
-      font-size: 2.4rem;
+      @extend .font-lg;
       color: $cWhite;
       font-weight: 700;
       z-index: 2;
-
-      @include mq(lg) {
-        font-size: 3.4rem;    
-      }
     }
 
     @include mq(md) {
@@ -486,7 +481,16 @@ About
   &__image {
     height: 30vh;
     width: 100%;
-    overflow: hidden;
+
+    @include mq(lg) {
+      overflow: hidden;
+      cursor: pointer;
+      height: 40vh;
+
+      &:hover > img {
+        transform: scale(1.1);
+      }
+    }
 
     & > img {
       height: 100%;
@@ -494,15 +498,8 @@ About
       object-fit: cover;
 
       @include mq(lg) {
-        &:hover {
-          scale: (1.05);
-          transition: scale 1s ease;
-        }
+        transition: transform .6s ease;
       }
-    }
-
-    @include mq(md) {
-      height: 40vh;
     }
   }
 
@@ -522,7 +519,7 @@ About
   &__text {
     @extend .font-sm;
     line-height: 1.8;
-    padding: 10px 1em;
+    padding: 1em;
   }
 }
 
