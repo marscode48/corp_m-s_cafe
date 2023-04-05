@@ -6,16 +6,16 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-var PallaxAnimation = /*#__PURE__*/function () {
-  function PallaxAnimation(el) {
-    _classCallCheck(this, PallaxAnimation);
+var BgParallax = /*#__PURE__*/function () {
+  function BgParallax(el) {
+    _classCallCheck(this, BgParallax);
 
     this.DOM = {};
     this.DOM.el = el;
     this.animate();
   }
 
-  _createClass(PallaxAnimation, [{
+  _createClass(BgParallax, [{
     key: "animate",
     value: function animate() {
       // 要素取得
@@ -42,6 +42,6 @@ var PallaxAnimation = /*#__PURE__*/function () {
     }
   }]);
 
-  return PallaxAnimation;
+  return BgParallax;
 }();
-//# sourceMappingURL=news-animation.js.map
+//# sourceMappingURL=bg-parallax.js.map

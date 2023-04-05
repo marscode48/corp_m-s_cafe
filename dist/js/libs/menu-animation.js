@@ -6,24 +6,24 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-var PallaxAnimation = /*#__PURE__*/function () {
-  function PallaxAnimation(el) {
-    _classCallCheck(this, PallaxAnimation);
+var MenuAnimation = /*#__PURE__*/function () {
+  function MenuAnimation(el) {
+    _classCallCheck(this, MenuAnimation);
 
     this.DOM = {};
     this.DOM.el = el;
     this.animate();
   }
 
-  _createClass(PallaxAnimation, [{
+  _createClass(MenuAnimation, [{
     key: "animate",
     value: function animate() {
       // 要素取得
-      var img = this.DOM.el.querySelector('.gsap-bg-img');
+      var img = this.DOM.el.querySelector('.menu__image');
       var _window = window,
-          innerHeight = _window.innerHeight; // タイムライン
+          innerHeight = _window.innerHeight; // ニュースタイムライン
 
-      var bgTl = gsap.timeline({
+      var menuTl = gsap.timeline({
         scrollTrigger: {
           trigger: this.DOM.el,
           start: 'top+=100 bottom',
@@ -34,7 +34,7 @@ var PallaxAnimation = /*#__PURE__*/function () {
       }); // アニメーション
       // 背景画像をY座標（Windowの高さ÷4）上に移動
 
-      bgTl.to(img, {
+      menuTl.to(img, {
         backgroundPositionY: "".concat(-innerHeight / 4, "px"),
         ease: 'none',
         duration: 1
@@ -42,6 +42,6 @@ var PallaxAnimation = /*#__PURE__*/function () {
     }
   }]);
 
-  return PallaxAnimation;
+  return MenuAnimation;
 }();
-//# sourceMappingURL=news-animation.js.map
+//# sourceMappingURL=menu-animation.js.map

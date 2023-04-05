@@ -55,17 +55,17 @@ var Main = /*#__PURE__*/function () {
       }
     }
   }, {
+    key: "_parallaxAnimation",
+    value: function _parallaxAnimation(el, inview) {
+      if (inview) {
+        new BgParallax(el);
+      }
+    }
+  }, {
     key: "_aboutAnimation",
     value: function _aboutAnimation(el, inview) {
       if (inview) {
         new AboutAnimation(el);
-      }
-    }
-  }, {
-    key: "_newsAnimation",
-    value: function _newsAnimation(el, inview) {
-      if (inview) {
-        new NewsAnimation(el);
       }
     }
   }, {
@@ -107,7 +107,8 @@ var Main = /*#__PURE__*/function () {
       new ScrollObserver('.gsap-top', this._mainVisualAnimation);
       new ScrollObserver('.gsap-feature', this._featureAnimation);
       new ScrollObserver('.gsap-about', this._aboutAnimation);
-      new ScrollObserver('.gsap-news', this._newsAnimation);
+      new ScrollObserver('.gsap-menu', this._parallaxAnimation);
+      new ScrollObserver('.gsap-news', this._parallaxAnimation);
       new ScrollObserver('.menu__item', this._inviewAnimation);
       new ScrollObserver('.site-title', this._inviewAnimation);
       new ScrollObserver('.cover-slide', this._inviewAnimation);

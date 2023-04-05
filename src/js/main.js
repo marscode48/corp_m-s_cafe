@@ -36,15 +36,15 @@ class Main {
     }
   }
 
-  _aboutAnimation(el, inview) {
+  _parallaxAnimation(el, inview) {
     if (inview) {
-      new AboutAnimation(el);
+      new BgParallax(el);
     }
   }
 
-  _newsAnimation(el, inview) {
+  _aboutAnimation(el, inview) {
     if (inview) {
-      new NewsAnimation(el);
+      new AboutAnimation(el);
     }
   }
 
@@ -81,7 +81,8 @@ class Main {
     new ScrollObserver('.gsap-top', this._mainVisualAnimation);
     new ScrollObserver('.gsap-feature', this._featureAnimation);
     new ScrollObserver('.gsap-about', this._aboutAnimation);
-    new ScrollObserver('.gsap-news', this._newsAnimation);
+    new ScrollObserver('.gsap-menu', this._parallaxAnimation);
+    new ScrollObserver('.gsap-news', this._parallaxAnimation);
     new ScrollObserver('.menu__item', this._inviewAnimation);
     new ScrollObserver('.site-title', this._inviewAnimation);
     new ScrollObserver('.cover-slide', this._inviewAnimation);

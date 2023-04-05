@@ -1,4 +1,4 @@
-class NewsAnimation {
+class BgParallax {
   constructor(el) {
     this.DOM = {};
     this.DOM.el = el;
@@ -7,11 +7,11 @@ class NewsAnimation {
 
   animate() {
     // 要素取得
-    const img = this.DOM.el.querySelector('.news__image');
+    const img = this.DOM.el.querySelector('.gsap-bg-img');
     const { innerHeight } = window;
 
-    // ニュースタイムライン
-    const newsTl = gsap.timeline({
+    // タイムライン
+    const bgTl = gsap.timeline({
       scrollTrigger: {
         trigger: this.DOM.el,
         start: 'top+=100 bottom',
@@ -23,7 +23,7 @@ class NewsAnimation {
 
     // アニメーション
     // 背景画像をY座標（Windowの高さ÷4）上に移動
-    newsTl.to(
+    bgTl.to(
       img,
       {
         backgroundPositionY: `${-innerHeight / 4}px`,
