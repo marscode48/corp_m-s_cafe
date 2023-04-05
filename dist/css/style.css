@@ -943,14 +943,16 @@ Menu
 .menu {
   position: relative;
 }
-.menu::before {
-  background: url("../../images/menu-bg.jpg") no-repeat center center/cover;
-  content: "";
+.menu__image {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  background: url("../../images/menu-bg.jpg") no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(50%) brightness(0.7);
 }
 .menu__inner {
   position: relative;
@@ -1028,7 +1030,7 @@ About
   left: 0;
   height: 50%;
   width: 100%;
-  background: #423012;
+  background: url("../../images/about-bg.jpg") no-repeat center center/cover;
 }
 .about__container {
   overflow: hidden;

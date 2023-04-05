@@ -318,14 +318,20 @@ Menu
   @extend .mt-lg;
   position: relative;
 
-  &::before {
-    background: url("../../images/menu-bg.jpg") no-repeat center center / cover;
-    content: "";
+  &__image {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    background: url("../../images/sp-menu-bg.jpg") no-repeat;
+    background-size: auto auto !important;
+    filter: grayscale(75%) brightness(0.5);
+
+    @include mq(lg) {
+      background: url("../../images/menu-bg.jpg") no-repeat;
+
+    }
   }
   
   &__inner {
@@ -417,7 +423,7 @@ About
       left: 0;
       height: 50%;
       width: 100%;
-      background: #423012;
+      background: url("../../images/about-bg.jpg") no-repeat center center / cover;
     } 
   }
 
