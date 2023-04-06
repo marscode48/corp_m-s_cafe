@@ -1,6 +1,5 @@
 @use "../globals" as *;
 /* ギャラリーループスライダー */
-
 .gallery {
 
   & .swiper-wrapper {
@@ -66,14 +65,23 @@
   }
 
   & .slide-title {
-    font-size: 1.4rem;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.15rem;
     overflow: hidden;
+    font-size: 1.4rem;
+
+    @include mq(lg) {
+      font-size: 1.6rem;
+    }
   }
 
   & .slide-desc {
     margin-top: 5px;
-    font-size: 1.2rem;
     overflow: hidden;
+
+    font-size: 1.2rem;
+
+    @include mq(lg) {
+      font-size: 1.4rem;
+    }
   }
 }

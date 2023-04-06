@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* フェードイン */
 .appear.up .item {
   transform: translateY(6px);
 }
@@ -54,6 +55,7 @@
   transition-delay: 1s;
 }
 
+/* ボタン */
 .btn {
   position: relative;
   display: inline-block;
@@ -199,6 +201,7 @@
   transform: rotateX(-90deg);
 }
 
+/* 文字アニメーション */
 .animate-title,
 .tween-animate-title {
   opacity: 0;
@@ -434,14 +437,24 @@
   background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(90, 20, 20, 0.5) 50%);
 }
 .gallery .slide-title {
-  font-size: 1.4rem;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.15rem;
   overflow: hidden;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 960px) {
+  .gallery .slide-title {
+    font-size: 1.6rem;
+  }
 }
 .gallery .slide-desc {
   margin-top: 5px;
-  font-size: 1.2rem;
   overflow: hidden;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 960px) {
+  .gallery .slide-desc {
+    font-size: 1.4rem;
+  }
 }
 
 /* 共通クラス */
