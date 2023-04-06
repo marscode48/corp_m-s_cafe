@@ -334,7 +334,7 @@ Menu
     background-size: auto auto !important;
     filter: grayscale(75%) brightness(0.5);
 
-    @include mq(lg) {
+    @include mq(md) {
       background: url("../../images/menu-bg.jpg") no-repeat;
     }
   }
@@ -547,7 +547,7 @@ News
     background-size: auto auto !important;
     filter: grayscale(75%) brightness(0.5);
 
-    @include mq(lg) {
+    @include mq(md) {
       background: url("../../images/news-bg.jpg") no-repeat;
     }
   }

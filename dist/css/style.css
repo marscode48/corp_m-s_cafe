@@ -969,7 +969,7 @@ Menu
   background-size: auto auto !important;
   filter: grayscale(75%) brightness(0.5);
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 600px) {
   .menu__image {
     background: url("../../images/menu-bg.jpg") no-repeat;
   }
@@ -1158,7 +1158,7 @@ News
   background-size: auto auto !important;
   filter: grayscale(75%) brightness(0.5);
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 600px) {
   .news__image {
     background: url("../../images/news-bg.jpg") no-repeat;
   }
