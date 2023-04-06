@@ -1286,7 +1286,7 @@ Footer
 }
 @media screen and (min-width: 960px) {
   .footer__map-wrap {
-    width: 40%;
+    width: 45%;
   }
 }
 @media screen and (min-width: 960px) {
@@ -1308,7 +1308,7 @@ Footer
 @media screen and (min-width: 960px) {
   .footer__info {
     padding: 0;
-    width: 40%;
+    width: 45%;
   }
 }
 .footer__info p {

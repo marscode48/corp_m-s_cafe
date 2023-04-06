@@ -694,7 +694,7 @@ Footer
 
     &-wrap {
       @include mq(lg) {
-        width: 40%;
+        width: 45%;
       }
     }
 
@@ -723,7 +723,7 @@ Footer
 
     @include mq(lg) {
       padding: 0;
-      width: 40%;
+      width: 45%;
     }
     
     p {
