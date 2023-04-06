@@ -30,7 +30,7 @@ var Main = /*#__PURE__*/function () {
     value: function _init() {
       new MenuOpen();
       new MenuFadeIn(520);
-      new SmoothScroll(80);
+      new SmoothScroll(-80);
       new GallerySlider('.swiper-gallery-top', '.swiper-gallery-bottom');
       Pace.on('done', this._paceDone.bind(this));
     }
