@@ -1266,12 +1266,12 @@ Footer
 .footer__inner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 @media screen and (min-width: 960px) {
   .footer__inner {
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 .footer__map {
@@ -1299,7 +1299,7 @@ Footer
   height: 100%;
 }
 .footer__info {
-  padding: 25px 0;
+  padding-top: 30px;
   width: 100%;
 }
 @media screen and (min-width: 960px) {
@@ -1343,7 +1343,16 @@ Footer
     margin-top: 30px;
   }
 }
-.footer__sns li > a {
+@media screen and (min-width: 960px) {
+  .footer__sns li a {
+    transition: all 0.3s;
+  }
+  .footer__sns li a:hover {
+    color: rgb(220, 220, 220);
+    opacity: 0.75;
+  }
+}
+.footer__sns li a {
   padding: 0 1.25em;
   letter-spacing: 0.1em;
 }

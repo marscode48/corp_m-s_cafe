@@ -663,7 +663,7 @@ Footer
     left: 0;
     height: 100%;
     width: 100%;
-    filter: grayscale(50%) brightness(0.8);
+    filter: grayscale(35%) brightness(0.8);
   }
 
   &__wrapper {
@@ -676,11 +676,11 @@ Footer
   &__inner {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 
     @include mq(lg) {
       flex-direction: row-reverse;
       justify-content: space-between;
+      align-items: flex-start;
     }
   }
 
@@ -712,14 +712,14 @@ Footer
   }
 
   &__info {
-    padding: 25px 0;
+    padding-top: 30px;
     width: 100%;
 
     @include mq(lg) {
       padding: 0;
       width: 40%;
     }
-
+    
     p {
       line-height: 1.6;
 
@@ -758,9 +758,15 @@ Footer
       margin-top: 30px
     }
 
-    & li > a {
-      padding: 0 1.25em;
-      letter-spacing: 0.1em;
+    & li {
+      @include mq(lg) {
+        @include link-hovers();
+      }
+
+      & a {
+        padding: 0 1.25em;
+        letter-spacing: 0.1em;
+      }
     }
   }
 
