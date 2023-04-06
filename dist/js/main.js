@@ -20,7 +20,6 @@ var Main = /*#__PURE__*/function () {
   function Main() {
     _classCallCheck(this, Main);
 
-    this.side = document.querySelector('#side-btn');
     this.bg = document.querySelector('.bg');
 
     this._init();
@@ -76,15 +75,6 @@ var Main = /*#__PURE__*/function () {
       }
     }
   }, {
-    key: "_sideAnimation",
-    value: function _sideAnimation(el, inview) {
-      if (inview) {
-        this.side.classList.add('inview');
-      } else {
-        this.side.classList.remove('inview');
-      }
-    }
-  }, {
     key: "_textAnimation",
     value: function _textAnimation(el, inview) {
       if (inview) {
@@ -115,10 +105,6 @@ var Main = /*#__PURE__*/function () {
       new ScrollObserver('.appear', this._inviewAnimation);
       new ScrollObserver('.tween-animate-title', this._textAnimation, {
         rootMargin: '-100px 0px'
-      });
-      new ScrollObserver('#menu', this._sideAnimation.bind(this), {
-        once: false,
-        rootMargin: '-300px 0px 0px 0px'
       });
     }
   }]);

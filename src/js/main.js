@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class Main {
   constructor() {
-    this.side = document.querySelector('#side-btn');
     this.bg = document.querySelector('.bg');
     this._init();
   }
@@ -54,14 +53,6 @@ class Main {
     }
   }
 
-  _sideAnimation(el, inview) {
-    if (inview) {
-      this.side.classList.add('inview');
-    } else {
-      this.side.classList.remove('inview');
-    }
-  }
-
   _textAnimation(el, inview) {
     if (inview) {
       const ta = new TweenTextAnimation(el);
@@ -88,6 +79,5 @@ class Main {
     new ScrollObserver('.cover-slide', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
     new ScrollObserver('.tween-animate-title', this._textAnimation, { rootMargin: '-100px 0px' });
-    new ScrollObserver('#menu', this._sideAnimation.bind(this), { once: false, rootMargin: '-300px 0px 0px 0px' });
   }
 }
