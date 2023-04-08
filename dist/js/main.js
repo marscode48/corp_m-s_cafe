@@ -7,12 +7,6 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 document.addEventListener('DOMContentLoaded', function () {
-  window.scroll({
-    top: 0,
-    behavior: 'smooth'
-  });
-  gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.refresh();
   var main = new Main();
 });
 
@@ -28,21 +22,20 @@ var Main = /*#__PURE__*/function () {
   _createClass(Main, [{
     key: "_init",
     value: function _init() {
+      gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.refresh();
       new MenuOpen();
       new MenuFadeIn(520);
       new SmoothScroll(-80);
       new GallerySlider('.swiper-gallery-top', '.swiper-gallery-bottom');
-      Pace.on('done', this._paceDone.bind(this));
-    }
-  }, {
-    key: "_paceDone",
-    value: function _paceDone() {
+
       this._scrollInit();
     }
   }, {
     key: "_mainVisualAnimation",
     value: function _mainVisualAnimation(el, inview) {
       if (inview) {
+        window.scrollTo(0, 0);
         new MainVisualAnimation(el);
       }
     }
