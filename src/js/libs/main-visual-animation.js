@@ -39,7 +39,7 @@ class MainVisualAnimation {
         start: 'top top',
         end: '+=900',
         scrub: true,
-        markers: true,
+        markers: false,
         pin: true,
       },
     });

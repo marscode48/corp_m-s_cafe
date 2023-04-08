@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class Main {
   constructor() {
-    this.bg = document.querySelector('.bg');
     this._init();
   }
 
@@ -12,10 +11,9 @@ class Main {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.refresh();
     new MenuOpen();
-    new MenuFadeIn(520);
     new SmoothScroll(-80);
     new GallerySlider('.swiper-gallery-top', '.swiper-gallery-bottom');
-    this._scrollInit();
+    this._Init();
   }
 
   _mainVisualAnimation(el, inview) {
@@ -56,23 +54,12 @@ class Main {
     }
   }
 
-  _fadeInAnimation(el, inview) {
-    if (inview) {
-      this.bg.classList.add('inview');
-    } else {
-      this.bg.classList.remove('inview');
-    }
-  }
-
-  _scrollInit() {
+  _Init() {
     new ScrollObserver('.gsap-top', this._mainVisualAnimation);
     new ScrollObserver('.gsap-feature', this._featureAnimation);
     new ScrollObserver('.gsap-about', this._aboutAnimation);
     new ScrollObserver('.gsap-menu', this._parallaxAnimation);
     new ScrollObserver('.gsap-news', this._parallaxAnimation);
-    new ScrollObserver('.menu__item', this._inviewAnimation);
-    new ScrollObserver('.site-title', this._inviewAnimation);
-    new ScrollObserver('.cover-slide', this._inviewAnimation);
     new ScrollObserver('.appear', this._inviewAnimation);
     new ScrollObserver('.tween-animate-title', this._textAnimation, { rootMargin: '-100px 0px' });
   }
