@@ -812,10 +812,13 @@ Mainvisual
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  font-size: 12rem;
-  color: #fff;
-  font-family: "EB Garamond", serif;
+  font-size: 8rem;
   z-index: 10;
+}
+@media screen and (min-width: 960px) {
+  .mainvisual__title {
+    font-size: 12rem;
+  }
 }
 .mainvisual__title-left, .mainvisual__title-right {
   display: inline-block;
@@ -1023,7 +1026,7 @@ Menu
   flex-wrap: wrap;
   justify-content: center;
   padding: 5px 0;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.15rem;
   overflow: hidden;
 }
 @media screen and (min-width: 960px) {
@@ -1130,7 +1133,7 @@ About
 .about__read {
   margin-top: 10px;
   font-size: 1rem;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.5rem;
 }
 .about__title {
   font-weight: 700;
