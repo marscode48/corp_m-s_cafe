@@ -37,7 +37,7 @@
   </head>
 
   <body>
-    <div class="global-container">
+    <div id="container" class="container">
       <header id="header" class="header">
         <h1 class="header__logo gsap-top-logo">
           <a href="#header"><img src="images/logo.png" alt="Mars Cafe"></a>
@@ -60,587 +60,585 @@
           <span></span>
         </div>
       </header>
+
+      
+      <main>
+        <!-- メインビジュアル -->
+        <div class="mainvisual gsap-top">
+          <div class="mainvisual__title gsap-top-title">
+            <span class="mainvisual__title-left gsap-top-title-left">Welcome!</span
+            ><br>
+            <span class="mainvisual__title-right gsap-top-title-right">MarsCafe</span>
+          </div>
+          <div class="mainvisual__image gsap-top-image">
+            <img src="./images/mainvisual2.jpg" alt="">
+          </div>
+          <div class="mainvisual__bg-left gsap-top-bg-left"></div>
+          <div class="mainvisual__bg-right gsap-top-bg-right"></div>
+          <div class="mainvisual__scroll gsap-top-scroll">
+            <span>scroll</span>
+          </div>
+        </div>
   
-      <div class="container">
-        <main>
-          <!-- メインビジュアル -->
-          <div class="mainvisual gsap-top">
-            <div class="mainvisual__title gsap-top-title">
-              <span class="mainvisual__title-left gsap-top-title-left">Welcome!</span
-              ><br>
-              <span class="mainvisual__title-right gsap-top-title-right">MarsCafe</span>
+
+        <!-- Feature -->
+        <section id="feature" class="feature wrapper">
+          <div class="feature__inner">
+            <div class="feature__area gsap-feature">
+              <div class="feature__content">
+                <h2 class="main-title tween-animate-title">カフェの魔法使い、バリスタ。</h2>
+                <div class="feature__text">
+                  <p>
+                    コーヒーの芳醇な香りと味わいを、美しいラテアートと共に提供し、人々を魅了してやまない。
+                  </p>
+                  <p>
+                    そんな彼らのバリスタの技術や繊細な心遣いが、お客様に特別な体験や癒しを与える「魔法」のように感じられる。
+                  </p>
+                  <p>
+                    その「魔法」を多くの人に体験してほしい。その思いで「Mars Cafe」は南青山にオープンしました。
+                  </p>
+                </div>
+              </div>
+              <figure class="feature__figure">
+                <img class="feature__img" src="images/feature1.jpg" alt="" />
+              </figure>
             </div>
-            <div class="mainvisual__image gsap-top-image">
-              <img src="./images/mainvisual2.jpg" alt="">
-            </div>
-            <div class="mainvisual__bg-left gsap-top-bg-left"></div>
-            <div class="mainvisual__bg-right gsap-top-bg-right"></div>
-            <div class="mainvisual__scroll gsap-top-scroll">
-              <span>scroll</span>
+            <div class="feature__area gsap-feature">
+              <div class="feature__content">
+                <h2 class="main-title feature__title tween-animate-title">自家焙煎の「魅力」とは。</h2>
+                <div class="feature__text">
+                  <p>
+                    自家焙煎の魅力は、焙煎後すぐに飲むことができること。そのため、より新鮮で風味豊かな、深い味わいのコーヒーを楽しむことができます。
+                  </p>
+                  <p>
+                    また、焙煎方法やロースト度合いを自由に選ぶことができます。そのため、多彩な味わいや香りが楽しむことができるのも、自家焙煎の魅力です。
+                  </p>
+                  <p>
+                    当店が扱う厳選した高品質なアラビカ種のコーヒーを、ぜひあなた好みの味わいや香りで、贅沢なひとときをお楽しみください。
+                  </p>
+                </div>
+              </div>
+              <figure class="feature__figure">
+                <img class="feature__img" src="images/feature2.jpg" alt="" />
+              </figure>
             </div>
           </div>
-    
+        </section>
 
-          <!-- Feature -->
-          <section id="feature" class="feature wrapper">
-            <div class="feature__inner">
-              <div class="feature__area gsap-feature">
-                <div class="feature__content">
-                  <h2 class="main-title tween-animate-title">カフェの魔法使い、バリスタ。</h2>
-                  <div class="feature__text">
-                    <p>
-                      コーヒーの芳醇な香りと味わいを、美しいラテアートと共に提供し、人々を魅了してやまない。
-                    </p>
-                    <p>
-                      そんな彼らのバリスタの技術や繊細な心遣いが、お客様に特別な体験や癒しを与える「魔法」のように感じられる。
-                    </p>
-                    <p>
-                      その「魔法」を多くの人に体験してほしい。その思いで「Mars Cafe」は南青山にオープンしました。
-                    </p>
-                  </div>
-                </div>
-                <figure class="feature__figure">
-                  <img class="feature__img" src="images/feature1.jpg" alt="" />
-                </figure>
-              </div>
-              <div class="feature__area gsap-feature">
-                <div class="feature__content">
-                  <h2 class="main-title feature__title tween-animate-title">自家焙煎の「魅力」とは。</h2>
-                  <div class="feature__text">
-                    <p>
-                      自家焙煎の魅力は、焙煎後すぐに飲むことができること。そのため、より新鮮で風味豊かな、深い味わいのコーヒーを楽しむことができます。
-                    </p>
-                    <p>
-                      また、焙煎方法やロースト度合いを自由に選ぶことができます。そのため、多彩な味わいや香りが楽しむことができるのも、自家焙煎の魅力です。
-                    </p>
-                    <p>
-                      当店が扱う厳選した高品質なアラビカ種のコーヒーを、ぜひあなた好みの味わいや香りで、贅沢なひとときをお楽しみください。
-                    </p>
-                  </div>
-                </div>
-                <figure class="feature__figure">
-                  <img class="feature__img" src="images/feature2.jpg" alt="" />
-                </figure>
-              </div>
+
+        <!-- Menu -->
+        <section id="menu" class="menu gsap-menu">
+          <div class="menu__image gsap-bg-img"></div>
+          <div class="menu__inner wrapper">
+            <div class="menu__heading appear up">
+              <p class="sub-title item">MENU</p>
+              <h2 class="main-title tween-animate-title">バリスタ、こだわりのメニュー。</h2>
             </div>
-          </section>
-  
-  
-          <!-- Menu -->
-          <section id="menu" class="menu gsap-menu">
-            <div class="menu__image gsap-bg-img"></div>
-            <div class="menu__inner wrapper">
-              <div class="menu__heading appear up">
-                <p class="sub-title item">MENU</p>
-                <h2 class="main-title tween-animate-title">バリスタ、こだわりのメニュー。</h2>
+            <div class="menu__grid">
+              <div class="menu__drink">
+                <div class="menu__cat appear up">
+                  <div class="menu__title item">DRINK</div>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">ドリップコーヒー</p>
+                  <p class="menu__price item">¥350</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">カフェオレ</p>
+                  <p class="menu__price item">¥400</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">カプチーノ</p>
+                  <p class="menu__price item">¥400</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">エスプレッソ</p>
+                  <p class="menu__price item">¥350</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">アメリカーノ</p>
+                  <p class="menu__price item">¥350</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">モカ</p>
+                  <p class="menu__price item">¥450</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">抹茶ラテ</p>
+                  <p class="menu__price item">¥500</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">チャイラテ</p>
+                  <p class="menu__price item">¥500</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">ホットチョコレート</p>
+                  <p class="menu__price item">¥450</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">アイスティー</p>
+                  <p class="menu__price item">¥400</p>
+                </div>
+
               </div>
-              <div class="menu__grid">
-                <div class="menu__drink">
-                  <div class="menu__cat appear up">
-                    <div class="menu__title item">DRINK</div>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">ドリップコーヒー</p>
-                    <p class="menu__price item">¥350</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">カフェオレ</p>
-                    <p class="menu__price item">¥400</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">カプチーノ</p>
-                    <p class="menu__price item">¥400</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">エスプレッソ</p>
-                    <p class="menu__price item">¥350</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">アメリカーノ</p>
-                    <p class="menu__price item">¥350</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">モカ</p>
-                    <p class="menu__price item">¥450</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">抹茶ラテ</p>
-                    <p class="menu__price item">¥500</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">チャイラテ</p>
-                    <p class="menu__price item">¥500</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">ホットチョコレート</p>
-                    <p class="menu__price item">¥450</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">アイスティー</p>
-                    <p class="menu__price item">¥400</p>
-                  </div>
-  
+              <div class="menu__food">
+                <div class="menu__cat appear up">
+                  <div class="menu__title item">FOOD</div>
                 </div>
-                <div class="menu__food">
-                  <div class="menu__cat appear up">
-                    <div class="menu__title item">FOOD</div>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">トースト</p>
-                    <p class="menu__price item">¥450</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">サンドイッチ
-                    </p>
-                    <p class="menu__price item">¥650</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">サラダ</p>
-                    <p class="menu__price item">¥450</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">パスタ</p>
-                    <p class="menu__price item">¥750</p>
-                  </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">トースト</p>
+                  <p class="menu__price item">¥450</p>
                 </div>
-                <div class="menu__sweet">
-                  <div class="menu__cat appear up">
-                    <div class="menu__title item">SWEET</div>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">パンケーキ</p>
-                    <p class="menu__price item">¥650</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">ワッフル</p>
-                    <p class="menu__price item">¥550</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">クッキー</p>
-                    <p class="menu__price item">¥350</p>
-                  </div>
-                  <div class="menu__item appear left">
-                    <p class="menu__name item">アイスクリーム</p>
-                    <p class="menu__price item">¥500</p>
-                  </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">サンドイッチ
+                  </p>
+                  <p class="menu__price item">¥650</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">サラダ</p>
+                  <p class="menu__price item">¥450</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">パスタ</p>
+                  <p class="menu__price item">¥750</p>
+                </div>
+              </div>
+              <div class="menu__sweet">
+                <div class="menu__cat appear up">
+                  <div class="menu__title item">SWEET</div>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">パンケーキ</p>
+                  <p class="menu__price item">¥650</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">ワッフル</p>
+                  <p class="menu__price item">¥550</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">クッキー</p>
+                  <p class="menu__price item">¥350</p>
+                </div>
+                <div class="menu__item appear left">
+                  <p class="menu__name item">アイスクリーム</p>
+                  <p class="menu__price item">¥500</p>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
 
-          <!-- About -->
-          <section id="about" class="about gsap-about">
-            <div class="about__inner">
-              <div class="about__container wrapper">
-                <h2 class="main-title tween-animate-title">Mars Cafeとは。</h2>
-                <ul class="about__ul">
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about01.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">HISTORY</p>
-                    <p class="about__title">バリスタとの出会い</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about02.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">TRAINING</p>
-                    <p class="about__title">シアトルでの修行</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about03.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">WORLD</p>
-                    <p class="about__title">世界中のコーヒー探索</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about04.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">OPEN</p>
-                    <p class="about__title">南青山にオープン</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about05.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">ARABICA</p>
-                    <p class="about__title">アラビカ種の魅力</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about06.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">RICH-DEPTH</p>
-                    <p class="about__title">コクと深み</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about07.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">FRESH-SCENT</p>
-                    <p class="about__title">新鮮な香り</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about08.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">HOME-ROASTED</p>
-                    <p class="about__title">自家焙煎の美味</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about09.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">ESPRESSO</p>
-                    <p class="about__title">エスプレッソの魔法</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about10.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">LUXURY</p>
-                    <p class="about__title">日常に贅沢を</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about11.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">SPACE</p>
-                    <p class="about__title">心地よい空間</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>
-                  <li class="about__li">
-                    <div class="about__image">
-                      <img src="./images/about12.jpg" alt="">                      
-                    </div>
-                    <p class="about__read">MEMORY</p>
-                    <p class="about__title">思い出のひととき</p>
-                    <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  </li>             
-                </ul>  
-              </div>
+        <!-- About -->
+        <section id="about" class="about gsap-about">
+          <div class="about__inner">
+            <div class="about__container wrapper">
+              <h2 class="main-title tween-animate-title">Mars Cafeとは。</h2>
+              <ul class="about__ul">
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about01.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">HISTORY</p>
+                  <p class="about__title">バリスタとの出会い</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about02.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">TRAINING</p>
+                  <p class="about__title">シアトルでの修行</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about03.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">WORLD</p>
+                  <p class="about__title">世界中のコーヒー探索</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about04.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">OPEN</p>
+                  <p class="about__title">南青山にオープン</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about05.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">ARABICA</p>
+                  <p class="about__title">アラビカ種の魅力</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about06.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">RICH-DEPTH</p>
+                  <p class="about__title">コクと深み</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about07.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">FRESH-SCENT</p>
+                  <p class="about__title">新鮮な香り</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about08.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">HOME-ROASTED</p>
+                  <p class="about__title">自家焙煎の美味</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about09.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">ESPRESSO</p>
+                  <p class="about__title">エスプレッソの魔法</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about10.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">LUXURY</p>
+                  <p class="about__title">日常に贅沢を</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about11.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">SPACE</p>
+                  <p class="about__title">心地よい空間</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>
+                <li class="about__li">
+                  <div class="about__image">
+                    <img src="./images/about12.jpg" alt="">                      
+                  </div>
+                  <p class="about__read">MEMORY</p>
+                  <p class="about__title">思い出のひととき</p>
+                  <p class="about__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </li>             
+              </ul>  
             </div>
-          </section>
-  
-  
-          <!-- News -->
-          <section id="news" class="news gsap-news">
-            <div class="news__image gsap-bg-img"></div>
-            <div class="news__inner wrapper">
-              <div class="news__heading appear up">
-                <p class="sub-title item">NEWS</p>
-                <h2 class="main-title tween-animate-title">MarsCafeからのお知らせ。</h2>
-              </div>
-              <ul class="news__ul appear left">
-                <li class="news__li item">
-                  <div class="news__info">
-                    <span class="news__date">2023.XX.XX</span>
-                  </div>
-                  <a href="#" class="news__title">
-                    グルメ雑誌『ＸＸＸＸＸＸ Vol.11』に掲載していただきました。
-                  </a>
-                </li>
-                <li class="news__li item">
-                  <div class="news__info">
-                    <span class="news__date">2023.XX.XX</span>
-                  </div>
-                  <a href="#" class="news__title">
-                    ＸＸ月ＸＸ日から新商品「ＸＸＸＸＸＸＸ」の販売を開始します。
-                  </a>
-                </li>
-                <li class="news__li item">
-                  <div class="news__info">
-                    <span class="news__date">2023.XX.XX</span>
-                  </div>
-                  <a href="#" class="news__title">
-                    【限定販売のお知らせ】テキストテキストテキストテキストテキストテキストテキスト
-                  </a>
-                </li>
-                <li class="news__li item">
-                  <div class="news__info">
-                    <span class="news__date">2023.XX.XX</span>
-                  </div>
-                  <a href="#" class="news__title">
-                    TV番組『ＸＸＸＸＸＸ』に商品「〇〇」が紹介されます。
-                  </a>
-                </li>
-                <li class="news__li item">
-                  <div class="news__info">
-                    <span class="news__date">2023.XX.XX</span>
-                  </div>
-                  <a href="#" class="news__title">
-                    【臨時休業のお知らせ】テキストテキストテキストテキストテキストテキストテキスト
-                  </a>
-                </li>
-              </ul>
-              <div class="news__link appear up">
-                <a href="#menu">
-                  <button class="btn slide-bg item">MORE</button>
+          </div>
+        </section>
+
+
+        <!-- News -->
+        <section id="news" class="news gsap-news">
+          <div class="news__image gsap-bg-img"></div>
+          <div class="news__inner wrapper">
+            <div class="news__heading appear up">
+              <p class="sub-title item">NEWS</p>
+              <h2 class="main-title tween-animate-title">MarsCafeからのお知らせ。</h2>
+            </div>
+            <ul class="news__ul appear left">
+              <li class="news__li item">
+                <div class="news__info">
+                  <span class="news__date">2023.XX.XX</span>
+                </div>
+                <a href="#" class="news__title">
+                  グルメ雑誌『ＸＸＸＸＸＸ Vol.11』に掲載していただきました。
                 </a>
-              </div>
+              </li>
+              <li class="news__li item">
+                <div class="news__info">
+                  <span class="news__date">2023.XX.XX</span>
+                </div>
+                <a href="#" class="news__title">
+                  ＸＸ月ＸＸ日から新商品「ＸＸＸＸＸＸＸ」の販売を開始します。
+                </a>
+              </li>
+              <li class="news__li item">
+                <div class="news__info">
+                  <span class="news__date">2023.XX.XX</span>
+                </div>
+                <a href="#" class="news__title">
+                  【限定販売のお知らせ】テキストテキストテキストテキストテキストテキストテキスト
+                </a>
+              </li>
+              <li class="news__li item">
+                <div class="news__info">
+                  <span class="news__date">2023.XX.XX</span>
+                </div>
+                <a href="#" class="news__title">
+                  TV番組『ＸＸＸＸＸＸ』に商品「〇〇」が紹介されます。
+                </a>
+              </li>
+              <li class="news__li item">
+                <div class="news__info">
+                  <span class="news__date">2023.XX.XX</span>
+                </div>
+                <a href="#" class="news__title">
+                  【臨時休業のお知らせ】テキストテキストテキストテキストテキストテキストテキスト
+                </a>
+              </li>
+            </ul>
+            <div class="news__link appear up">
+              <a href="#menu">
+                <button class="btn slide-bg item">MORE</button>
+              </a>
             </div>
-          </section>
-  
-  
-          <!-- Gallery -->
-          <section id="gallery" class="gallery">
-            <div class="gallery__inner wrapper">
-              <div class="gallery__heading appear up">
-                <p class="sub-title item">GALLERY</p>
-                <h2 class="main-title tween-animate-title">バリスタが造るアートの世界。</h2>
-              </div>
-            </div>
+          </div>
+        </section>
 
-            <!-- Gallery Slider Top -->
-            <div class="swiper swiper-gallery-top">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery01.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">ドリップコーヒー / ¥350</p>
-                      <p class="slide-desc">アラビカ種の香りや味わいが楽しめます。</p>
-                    </div>
+
+        <!-- Gallery -->
+        <section id="gallery" class="gallery">
+          <div class="gallery__inner wrapper">
+            <div class="gallery__heading appear up">
+              <p class="sub-title item">GALLERY</p>
+              <h2 class="main-title tween-animate-title">バリスタが造るアートの世界。</h2>
+            </div>
+          </div>
+
+          <!-- Gallery Slider Top -->
+          <div class="swiper swiper-gallery-top">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery01.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">ドリップコーヒー / ¥350</p>
+                    <p class="slide-desc">アラビカ種の香りや味わいが楽しめます。</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery02.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">カフェオレ / ¥400</p>
-                      <p class="slide-desc"> 濃厚なエスプレッソと温かいミルクが混ざり合う、まろやかな味わい。</p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery02.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">カフェオレ / ¥400</p>
+                    <p class="slide-desc"> 濃厚なエスプレッソと温かいミルクが混ざり合う、まろやかな味わい。</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery03.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">カプチーノ / ¥400</p>
-                      <p class="slide-desc">  エスプレッソと泡立てたミルクが混ざり合う、クリーミーな味わい。</p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery03.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">カプチーノ / ¥400</p>
+                    <p class="slide-desc">  エスプレッソと泡立てたミルクが混ざり合う、クリーミーな味わい。</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery04.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">エスプレッソ / ¥350</p>
-                      <p class="slide-desc">アラビカ種の濃厚なコーヒーが短時間で楽しめます。
-                      </p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery04.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">エスプレッソ / ¥350</p>
+                    <p class="slide-desc">アラビカ種の濃厚なコーヒーが短時間で楽しめます。
+                    </p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery05.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">アメリカーノ / ¥350</p>
-                      <p class="slide-desc">エスプレッソにお湯を加えたドリンクで、アラビカ種の味わいを楽しめます。</p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery05.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">アメリカーノ / ¥350</p>
+                    <p class="slide-desc">エスプレッソにお湯を加えたドリンクで、アラビカ種の味わいを楽しめます。</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery06.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">モカ / ¥450</p>
-                      <p class="slide-desc"> エスプレッソとチョコレートの相性が抜群で、甘い味わいが楽しめます。</p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery06.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">モカ / ¥450</p>
+                    <p class="slide-desc"> エスプレッソとチョコレートの相性が抜群で、甘い味わいが楽しめます。</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery07.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">抹茶ラテ / ¥500</p>
-                      <p class="slide-desc">抹茶の香りと温かいミルクのまろやかな味わいが楽しめます。</p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery07.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">抹茶ラテ / ¥500</p>
+                    <p class="slide-desc">抹茶の香りと温かいミルクのまろやかな味わいが楽しめます。</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery08.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">チャイラテ / ¥500</p>
-                      <p class="slide-desc">スパイスの香りと温かいミルクがバランスよく混ざり合い、クリーミーでコクのある味わい。</p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery08.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">チャイラテ / ¥500</p>
+                    <p class="slide-desc">スパイスの香りと温かいミルクがバランスよく混ざり合い、クリーミーでコクのある味わい。</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery09.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">ホットチョコレート / ¥450</p>
-                      <p class="slide-desc">チョコレートの風味と甘さが口の中に広がる、濃厚でクリーミーな味わい。</p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery09.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">ホットチョコレート / ¥450</p>
+                    <p class="slide-desc">チョコレートの風味と甘さが口の中に広がる、濃厚でクリーミーな味わい。</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery10.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">アイスティー / ¥400</p>
-                      <p class="slide-desc">鮮やかな色合いの茶葉から、フルーティーな香りが広がります。</p>
-                    </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery10.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">アイスティー / ¥400</p>
+                    <p class="slide-desc">鮮やかな色合いの茶葉から、フルーティーな香りが広がります。</p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        
+          <!-- Gallery Slider Bottom -->
+          <div class="swiper swiper-gallery-bottom">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery01.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">ドリップコーヒー / ¥350</p>
+                    <p class="slide-desc">アラビカ種の香りや味わいが楽しめます。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery02.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">カフェオレ / ¥400</p>
+                    <p class="slide-desc"> 濃厚なエスプレッソと温かいミルクが混ざり合う、まろやかな味わい。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery03.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">カプチーノ / ¥400</p>
+                    <p class="slide-desc">  エスプレッソと泡立てたミルクが混ざり合う、クリーミーな味わい。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery04.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">エスプレッソ / ¥350</p>
+                    <p class="slide-desc">アラビカ種の濃厚なコーヒーが短時間で楽しめます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery05.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">アメリカーノ / ¥350</p>
+                    <p class="slide-desc">エスプレッソにお湯を加えたドリンクで、アラビカ種の味わいを楽しめます。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery06.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">モカ / ¥450</p>
+                    <p class="slide-desc"> エスプレッソとチョコレートの相性が抜群で、甘い味わいが楽しめます。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery07.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">抹茶ラテ / ¥500</p>
+                    <p class="slide-desc">抹茶の香りと温かいミルクのまろやかな味わいが楽しめます。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery08.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">チャイラテ / ¥500</p>
+                    <p class="slide-desc">スパイスの香りと温かいミルクがバランスよく混ざり合い、クリーミーでコクのある味わい。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery09.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">ホットチョコレート / ¥450</p>
+                    <p class="slide-desc">チョコレートの風味と甘さが口の中に広がる、濃厚でクリーミーな味わい。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide-media"><img src="./images/gallery10.jpg" alt=""></div>
+                  <div class="slide-content">
+                    <p class="slide-title">アイスティー / ¥400</p>
+                    <p class="slide-desc">鮮やかな色合いの茶葉から、フルーティーな香りが広がります。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           
-            <!-- Gallery Slider Bottom -->
-            <div class="swiper swiper-gallery-bottom">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery01.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">ドリップコーヒー / ¥350</p>
-                      <p class="slide-desc">アラビカ種の香りや味わいが楽しめます。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery02.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">カフェオレ / ¥400</p>
-                      <p class="slide-desc"> 濃厚なエスプレッソと温かいミルクが混ざり合う、まろやかな味わい。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery03.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">カプチーノ / ¥400</p>
-                      <p class="slide-desc">  エスプレッソと泡立てたミルクが混ざり合う、クリーミーな味わい。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery04.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">エスプレッソ / ¥350</p>
-                      <p class="slide-desc">アラビカ種の濃厚なコーヒーが短時間で楽しめます。
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery05.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">アメリカーノ / ¥350</p>
-                      <p class="slide-desc">エスプレッソにお湯を加えたドリンクで、アラビカ種の味わいを楽しめます。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery06.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">モカ / ¥450</p>
-                      <p class="slide-desc"> エスプレッソとチョコレートの相性が抜群で、甘い味わいが楽しめます。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery07.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">抹茶ラテ / ¥500</p>
-                      <p class="slide-desc">抹茶の香りと温かいミルクのまろやかな味わいが楽しめます。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery08.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">チャイラテ / ¥500</p>
-                      <p class="slide-desc">スパイスの香りと温かいミルクがバランスよく混ざり合い、クリーミーでコクのある味わい。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery09.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">ホットチョコレート / ¥450</p>
-                      <p class="slide-desc">チョコレートの風味と甘さが口の中に広がる、濃厚でクリーミーな味わい。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide">
-                    <div class="slide-media"><img src="./images/gallery10.jpg" alt=""></div>
-                    <div class="slide-content">
-                      <p class="slide-title">アイスティー / ¥400</p>
-                      <p class="slide-desc">鮮やかな色合いの茶葉から、フルーティーな香りが広がります。</p>
-                    </div>
-                  </div>
-                </div>
+        </section>
+
+
+      </main>
+
+
+      <footer id="footer" class="footer appear up">
+        <div class="footer__wrapper wrapper">
+          <div class="footer__inner">
+            <div class="footer__map-wrap">
+              <div class="footer__map">
+                <!-- Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25931.953750982833!2d139.7015027959564!3d35.66483104915763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b6254cc464f%3A0x99773132a4b583e6!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx!5e0!3m2!1sja!2sjp!4v1680068170507!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
-            </div>
-
-            
-          </section>
-
-
-        </main>
-  
-  
-        <footer id="footer" class="footer appear up">
-          <div class="footer__wrapper wrapper">
-            <div class="footer__inner">
-              <div class="footer__map-wrap">
-                <div class="footer__map">
-                  <!-- Google Map -->
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25931.953750982833!2d139.7015027959564!3d35.66483104915763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b6254cc464f%3A0x99773132a4b583e6!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx!5e0!3m2!1sja!2sjp!4v1680068170507!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div> 
-              <div class="footer__info">
-                <a class="footer__logo item" href="#header">
-                  <img src="images/logo.png" alt="Mars Cafe">
-                </a>
-                <p class="item">
-                  〒107-0062 東京都港区南青山X-XX-XX<br>
-                  X-XX-XX, Minamiaoyama, Minato-ku, Tokyo<br>
-                </p>
-                <p class="item">
-                  We're open everyday.<br>
-                  Open: 7:00 am<br>
-                  Close: 8:00 pm
-                </p>
-                <p class="item">Tel: XX-XXXX-XXXX</p>
-                <ul class="footer__sns">
-                  <li class="item"><a class="twitter icon" href="#header" target="_blank">Twitter</a></li>
-                  <li class="item"><a class="facebook icon" href="#header" target="_blank">Facebook</a></li>
-                  <li class="item"><a class="instagram icon" href="#header" target="_blank">Instagram</a></li>
-                </ul>
-              </div>  
-            </div>
-            <p class="footer__copyright item">&copy; Mars Cafe</p>
+            </div> 
+            <div class="footer__info">
+              <a class="footer__logo item" href="#header">
+                <img src="images/logo.png" alt="Mars Cafe">
+              </a>
+              <p class="item">
+                〒107-0062 東京都港区南青山X-XX-XX<br>
+                X-XX-XX, Minamiaoyama, Minato-ku, Tokyo<br>
+              </p>
+              <p class="item">
+                We're open everyday.<br>
+                Open: 7:00 am<br>
+                Close: 8:00 pm
+              </p>
+              <p class="item">Tel: XX-XXXX-XXXX</p>
+              <ul class="footer__sns">
+                <li class="item"><a class="twitter icon" href="#header" target="_blank">Twitter</a></li>
+                <li class="item"><a class="facebook icon" href="#header" target="_blank">Facebook</a></li>
+                <li class="item"><a class="instagram icon" href="#header" target="_blank">Instagram</a></li>
+              </ul>
+            </div>  
           </div>
-        </footer>
-      </div>
+          <p class="footer__copyright item">&copy; Mars Cafe</p>
+        </div>
+      </footer>
     </div>
-    
   </body>
 </html>
