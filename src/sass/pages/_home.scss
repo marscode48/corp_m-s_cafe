@@ -82,12 +82,12 @@
     top: 0;
     left: 0;
     text-align: center;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     transition: all 0.6s;
     z-index: 30;
 
     &.active {
-      transform: translateY(0%);
+      transform: translateX(0%);
   
       & .header__li {
         transform: none;
@@ -95,7 +95,7 @@
   
         @for $i from 1 through 7 {
           &:nth-child(#{$i}) {
-              transition-delay: $i * 0.1s;
+              transition-delay: $i * 0.07s;
           }
         }
       }
@@ -103,7 +103,7 @@
   }
 
   &__ul {
-    width: 100%;
+    // width: 100%;
     padding-top: 100px;
     perspective: 2000px;
     transform-style: preserve-3d;
