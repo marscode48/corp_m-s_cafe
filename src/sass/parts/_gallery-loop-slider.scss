@@ -1,0 +1,87 @@
+@use "../globals" as *;
+/* ギャラリーループスライダー */
+.gallery {
+
+  & .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  & .swiper-slide {
+    width: max-content;
+  }
+
+  & .slide {
+    width: 150px;
+    transition: .6s all ease-out;
+
+    @include mq(lg) {  
+      width: 200px;
+    }
+
+    &:hover {
+      width: calc(150px * 1.5);
+
+      @include mq(lg) {  
+        &:hover {
+          width: calc(200px * 1.5);
+        }
+      }
+    }
+
+    &:hover .slide-content {
+      opacity: 1;
+    }
+  }
+
+  & .slide-media {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+
+    @include mq(lg) {
+      height: 250px;
+    }
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .slide-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px 10px;
+    transition: .6s all ease-out;
+    opacity: 0;
+    color: $cWhite;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(90, 20, 20, 0.5) 50%);
+  }
+
+  & .slide-title {
+    letter-spacing: 0.15rem;
+    overflow: hidden;
+    font-size: 1.4rem;
+
+    @include mq(lg) {
+      font-size: 1.6rem;
+    }
+  }
+
+  & .slide-desc {
+    margin-top: 5px;
+    overflow: hidden;
+
+    font-size: 1.2rem;
+
+    @include mq(lg) {
+      font-size: 1.4rem;
+    }
+  }
+}

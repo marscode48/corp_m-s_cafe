@@ -1,0 +1,197 @@
+@use "../globals" as *;
+/* 共通クラス */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @extend .font-md;
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  color: $cWhite;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* アイコン */
+.icon {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+  }
+
+  &.twitter::before {
+    background-image: url(../images/twitter.svg);
+  }
+
+  &.facebook::before {
+    background-image: url(../images/facebook.svg);
+  }
+
+  &.instagram::before {
+    background-image: url(../images/instagram.svg);
+  }
+}
+
+/* マージン */
+.mt-sm {
+  margin-top: 16px !important;
+}
+
+.mt-md {
+  margin-top: 30px !important;
+
+  @include mq(lg) {
+    margin-top: 60px !important;
+  }
+}
+
+.mt-lg {
+  margin-top: 80px !important;
+
+  @include mq(lg) {
+    margin-top: 150px !important;
+  }
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-md {
+  margin-bottom: 30px !important;
+
+  @include mq(lg) {
+    margin-bottom: 60px !important;
+  }
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+
+  @include mq(lg) {
+    margin-bottom: 150px !important;
+  }
+}
+
+// パディング
+.pt-sm {
+  padding-top: 16px !important;
+}
+
+.pt-md {
+  padding-top: 30px !important;
+
+  @include mq(lg) {
+    padding-top: 60px !important;
+  }
+}
+
+.pt-lg {
+  padding-top: 80px !important;
+
+  @include mq(lg) {
+    padding-top: 150px !important;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-md {
+  padding-bottom: 30px !important;
+
+  @include mq(lg) {
+    padding-bottom: 60px !important;
+  }
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+
+  @include mq(lg) {
+    padding-bottom: 150px !important;
+  }
+}
+
+/* フォント */
+.font-sm {
+  font-size: 1.2rem;
+
+  @include mq(lg) {
+    font-size: 1.4rem;
+  }
+}
+.font-md {
+  font-size: 1.4rem;
+
+  @include mq(lg) {
+    font-size: 1.6rem;
+  }
+}
+.font-lr {
+  font-size: 1.8rem;
+
+  @include mq(lg) {
+    font-size: 2.4rem;
+  }
+}
+.font-lg {
+  font-size: 2.5rem;
+
+  @include mq(lg) {
+    font-size: 3.6rem;
+  }
+}
+
+.container {
+  background: $cBlack;
+  color: $cWhite;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+.main-title {
+  border-bottom: solid 1px $cWhite;
+  display: inline-block;
+  @extend .font-lr;
+  font-weight: 700;
+
+  @include mq(lg) {
+    letter-spacing: 1px;
+  }
+}
+
+.sub-title {
+  @extend .font-md;
+  letter-spacing: 4px;
+}
+
+.sub-title + .main-title {
+  margin-top: 20px;
+}
