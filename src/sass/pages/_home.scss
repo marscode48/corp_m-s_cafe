@@ -314,98 +314,6 @@ Feature
 
 
 /*-------------------------------------------
-Menu
--------------------------------------------*/
-.menu {
-  @extend .mt-lg;
-  position: relative;
-
-  &__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: url("../../images/sp-menu-bg.jpg") no-repeat;
-    background-size: auto auto !important;
-    filter: grayscale(75%) brightness(0.5);
-
-    @include mq(md) {
-      background: url("../../images/menu-bg.jpg") no-repeat;
-    }
-  }
-  
-  &__inner {
-    @extend .pt-md;
-    @extend .pb-md;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-  
-  &__grid {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 30px;
-
-    @include mq(lg) {
-      padding: 40px 80px 0;
-      grid-column-gap: 80px;
-    }
-  }
-
-  &__drink {
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
-  }
-
-  &__food {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
-  &__sweet {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-    align-self: end;
-  }
-
-  &__cat + &__item {
-    margin-top: 10px;
-
-    @include mq(lg) {
-      margin-top: 20px;
-    }
-  }
-
-  &__title {
-    @extend .font-md;
-    display: inline-block;
-    border-bottom: 1px dotted $cWhite;
-    letter-spacing: 0.5rem;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px 0;
-    letter-spacing: 0.15rem;
-    overflow: hidden;
-    @extend .font-sm;
-
-    @include mq(lg) {
-      padding: 15px 0;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-}
-
-
-/*-------------------------------------------
 About
 -------------------------------------------*/
 .about {
@@ -527,6 +435,116 @@ About
 
 
 /*-------------------------------------------
+Menu
+-------------------------------------------*/
+.menu {
+  @extend .mt-lg;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../../images/sp-menu-bg.jpg") no-repeat;
+    background-size: auto auto !important;
+    filter: grayscale(75%) brightness(0.5);
+
+    @include mq(md) {
+      background: url("../../images/menu-bg.jpg") no-repeat;
+    }
+  }
+  
+  &__inner {
+    @extend .pt-md;
+    @extend .pb-md;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 30px;
+
+    @include mq(lg) {
+      padding: 40px 80px 0;
+      grid-column-gap: 80px;
+    }
+  }
+
+  &__drink {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+  }
+
+  &__food {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  &__sweet {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    align-self: end;
+  }
+
+  &__cat + &__item {
+    margin-top: 10px;
+
+    @include mq(lg) {
+      margin-top: 20px;
+    }
+  }
+
+  &__title {
+    @extend .font-md;
+    display: inline-block;
+    border-bottom: 1px dotted $cWhite;
+    letter-spacing: 0.5rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px 0;
+    letter-spacing: 0.15rem;
+    overflow: hidden;
+    @extend .font-sm;
+
+    @include mq(lg) {
+      padding: 15px 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+/*-------------------------------------------
+Gallery
+-------------------------------------------*/
+.gallery {
+  @extend .mt-lg;
+
+  &__inner {
+    @extend .pb-md;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+}
+
+
+/*-------------------------------------------
 News
 -------------------------------------------*/
 .news {
@@ -627,24 +645,6 @@ News
         color: $cBlack;
       }
     }
-  }
-}
-
-
-/*-------------------------------------------
-Gallery
--------------------------------------------*/
-.gallery {
-  @extend .mt-lg;
-
-  &__inner {
-    @extend .pb-md;
-    position: relative;
-    z-index: 2;
-  }
-
-  &__heading {
-    text-align: center;
   }
 }
 
